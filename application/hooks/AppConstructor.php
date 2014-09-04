@@ -17,12 +17,12 @@ class AppConstructor extends CI_Hooks {
     	parent::__construct();      
 
         $this->CI = & get_instance();
-        $this->CI->load->library('carabiner/carabiner'); 
+        $this->CI->load->library('carabiner'); 
         $carabiner_config = array(
             'script_dir' => 'assets/', 
             'style_dir'  => 'assets/',
             'cache_dir'  => 'assets/cache/',
-            'base_uri'   => 'demo.localhost.com/sales',
+            'base_uri'   => 'demo.haiinteractive.com/media/',
             'combine'    => TRUE,
             'dev'        => FALSE
         );
