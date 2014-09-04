@@ -1,0 +1,16 @@
+<ul id="navmenu-v"> 
+ {foreach from=$menus key=k item=v}
+ <li  >
+     
+     <a href="{$v.url}">
+         <div style="float:left; " >
+         <img src="{$v.backimage}" style="padding-right:5px;  " /> 
+         </div>
+         <div style="float:left;  padding-bottom:1px; ">
+         {$k}
+        </div>
+         <div style="clear:both; "></div>
+     </a>
+ </li>
+{/foreach} 
+ </ul>  

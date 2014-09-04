@@ -1,0 +1,37 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+
+    	        
+<div class="one_wrap">
+   <div class="widget">
+   
+	 {include file='site/en/report_filter.html'}
+
+	</div>   
+</section>
+</div>
+
+<script>
+   var TotalRackRate=jQuery('#TotalRackRate').val();
+   var TotalOffer_Rate=jQuery('#TotalOffer_Rate').val();
+   var disc_total=jQuery('#disc_total').val();
+   var total_net_rate=jQuery('#total_net_rate').val();
+   var total_ads=jQuery('#total_ads').val();
+   var av_ads=jQuery('#av_ads').val();
+   var Page_Equivalent=jQuery('#Page_Equivalent').val();
+    var Av_Page_Eq=jQuery('#Av_Page_Eq').val();
+    		
+   jQuery('#Net_Revenue').html(total_net_rate);
+   jQuery('#Gross_Revenue').html(TotalRackRate);
+   jQuery('#Discount').html(disc_total);
+   jQuery('#TotalPercentageSale').html(disc_total);
+   jQuery('#No_of_Ads').html(total_ads);
+   jQuery('#Av_yield_ads').html(av_ads);
+   jQuery('#Page_Equivalent_val').html(Page_Equivalent);
+    jQuery('#Av_Page_Eq_val').html(Av_Page_Eq);
+</script>
+</body>
+
+<!-- Mirrored from thedemolabs.com/demo/explocity/IssuesReport2.php by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 07:22:30 GMT -->
+</html>

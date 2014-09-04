@@ -1,0 +1,99 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+
+    	        
+<div class="one_wrap">
+   <div class="widget">
+   
+	 {include file='site/en/mis_filter.html'}
+			
+			{if $datas}
+            <div class="widget_body_table_top" style="padding:10px;">
+		            <div class="widget_body">
+		            	<!--Activity Table-->
+		            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+		                    <tr>
+		                        <th width="10%">SALES BOOKING FOR DISPLAY</th>
+		                        <th></th>
+		                        <th></th>
+		                        <th rowspan="4" colspan="7">BTF Publishing</th>
+		                        <th colspan="3">TOTAL TURNOVER</th>
+		                        <th>Rs. {$total_revenue.total_turnover}</th>
+		                    </tr>
+		                    
+		                    <tr>
+		                        <th>EXPLOCITY GUIDE</th>
+		                        <th></th>
+		                        <th>Bangalore</th>
+		                        <th colspan="3">NET REVENUE</th>
+		                        <th>Rs. {$total_revenue.total_amount}</th>
+		                    </tr>
+
+		                    <tr>
+		                        <th>ISSUE DATED</th>
+		                        <th>{$eg_month} - {$eg_year}</th>
+		                        <th></th>
+		                        <th colspan="3">TOTAL DISCOUNT / AGENCY</th>
+		                        <th>Rs. {$total_revenue.total_turnover-$total_revenue.total_amount}</th>
+		                    </tr>
+		                    
+		                    <tr>
+		                        <th></th>
+		                        <th></th>
+		                        <th></th>
+		                        <th colspan="3">TOTAL PERCENTAGE OF SALE INCLD AGENCY</th>
+		                        <th>{math equation="abs(x)" x=$total_revenue.total_amount/$total_revenue.total_turnover*100-100 assign="bar" format="%.2f"}{$bar}%</th>
+		                    </tr>
+		                    <tr style="text-align: center;">
+		                    	<th>RO NO</th>
+		                    	<th>CLIENT ( AGENT & CLIENT )</th>
+		                    	<th>TYPE</th>
+		                    	<th>SP</th>
+		                    	<th>QTY</th>
+		                    	<th>CAT</th>
+		                    	<th>CR</th>
+		                    	<th>RACK RATE</th>
+		                    	<th>DISC</th>
+		                    	<th>DISCOUNT</th>
+		                    	<th>NET RATE</th>
+		                    	<th>ACOM%</th>
+		                    	<th>ACOM</th>
+		                    	<th>NET BILL</th>
+		                    </tr>
+			              {foreach from=$datas item=infor}
+		                    <tr>
+		                        <td style="text-align: left;"><a href="{$base_url}reports/Views/{$infor.ro_number}">{$infor.ro_number}</a></td>
+		                        <td style="text-align: left;">{$infor.company_name}</td>
+		                        <td style="text-align: left;">{$infor.code}</td>
+		                        <td style="text-align: left;">{$infor.sales_person}</td>
+		                        <td style="text-align: left;">{$infor.qty}</td>
+		                        <td style="text-align: left;">{$infor.category_name}</td>
+		                        <td></td>
+		                        <td style="text-align: right;">{$infor.rack_rate}</td>
+		                        <td style="text-align: right;">{math equation="abs(x)" x=$infor.offered_rate/$infor.rack_rate*100-100 assign="bar" format="%.2f"}{$bar}% </td>
+		                        <td style="text-align: right;">{$infor.rack_rate-$infor.offered_rate}</td>
+		                        <td style="text-align: right;">{$infor.offered_rate}</td>
+		                        <td style="text-align: left;">0%</td>
+		                        <td style="text-align: left;">0.00</td>
+		                        <td style="text-align: right;">{$infor.net_bill}</td>
+		                    </tr>
+	                       {/foreach} 
+	                       
+		                </table>
+						<div class="action_bar">
+		                    <a class="button_small whitishBtn" href="{$base_url}exports/Sales_Report/?Sales_Person={$Sales_Person}&Category_Business={$Category}&adtype={$Adtype}&lapsed_client={$lapsed_client}&export=1"><span class="iconsweet">l</span>Export Table</a>
+		                </div>
+		          </div>
+            </div>
+			{else}
+				<div><br/><h2>No Results Found</h2></div>
+			{/if}
+
+	</div>   
+</section>
+</div>
+</body>
+
+<!-- Mirrored from thedemolabs.com/demo/explocity/IssuesReport2.php by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 07:22:30 GMT -->
+</html>

@@ -1,0 +1,38 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+    	        
+<div class="one_wrap">
+    	<div class="widget">
+        	<div class="widget_title"><h5>Edit Category</h5></div>
+            <div class="widget_body_table_top" style="padding:10px;">
+			<form name='edit_category_form' id='edit_category_form' method='POST' >
+            <table width="100%">
+
+        	<div class='alert-box error' style="display: none;"></div>
+        	<div class='alert-box success' style="display: none;"></div>
+              <tr>
+                 <td width="26%" height="28" align="left" valign="middle">Category Name :</td>
+                 <td width="74%" align="left" valign="middle"><input name="category_name" type="text"  id="category_name" size="30" value="{$categoryinfo.category_name}" /></td>
+             </tr>
+                <tr>
+                     <td height="28" align="left" valign="bottom">Category Status :</td>
+                     <td align="left" valign="bottom">
+		             {html_options name=category_status id=category_status options=$options selected=$categoryinfo.category_status}</td>
+                </tr>
+                <tr>
+               <td>&nbsp;</td>
+               	<input type='hidden' name='category_id' id='category_id' value="{$categoryinfo.category_id}" />
+               <td><input type="submit" id="update_company_btn" name='update_company_btn' value="Update"></td>
+             </tr>
+                              
+            </table>
+             </form>
+            </div>
+        </div>
+</div>
+	
+       
+</div>
+</section>
+</div>

@@ -1,0 +1,233 @@
+<div>	
+	<span style="margin-left:200px; line-height: 2; font-size: 16px;">Start Date</span><span style="margin-left:600px; line-height: 2; font-size: 16px;">End Date</span>
+</div>
+<div class="widget_title">
+	<div id="eg_form">
+	<form action="{$base_url}reports/Master_Client_List/" method="get" id="egreport" name="egreport">
+
+            <!-- eg selection -->
+            <div id="eg_session">
+                <div style="padding:10px; float:left;">
+	                <select name="start_month" id="start_month" >
+	                	<option value="" >Select Month</option>
+	                 {if $eg_month == 1}
+		               	<option selected>Jan</option>
+		               {else}
+	                    <option  value="1">Jan</option>
+		               {/if}
+		               {if $eg_month == 2}
+						<option  value="2" selected>Feb</option>
+		               {else}
+						<option  value="2">Feb</option>
+		               {/if}
+
+		               {if $eg_month == 3}
+						<option  value="3" selected>Mar</option>
+		               {else}
+						<option  value="3">Mar</option>
+		               {/if}
+						
+		               {if $eg_month == 4}
+						<option  value="4" selected>Apr</option>
+		               {else}
+						<option  value="4">Apr</option>
+		               {/if}
+
+		               {if $eg_month == 5}
+						<option  value="5" selected>May</option>
+		               {else}
+						<option  value="5">May</option>
+		               {/if}
+						
+		               {if $eg_month == 6}
+						<option  value="6" selected>Jun</option>
+		               {else}
+						<option  value="6">Jun</option>
+		               {/if}
+						
+		               {if $eg_month == 7}
+						<option  value="7" selected>Jul</option>
+		               {else}
+						<option  value="7">Jul</option>
+		               {/if}
+
+		               {if $eg_month == 8}
+						<option  value="8" selected>Aug</option>
+		               {else}
+						<option  value="8">Aug</option>
+		               {/if}
+						
+		               {if $eg_month == 9}
+						<option  value="9" selected>Sep</option>
+		               {else}
+						<option  value="9">Sep</option>
+		               {/if}
+						
+		               {if $eg_month == 10}
+						<option  value="10" selected>Oct</option>
+		               {else}
+						<option  value="10">Oct</option>
+		               {/if}
+						
+		               {if $eg_month == 11}
+						<option  value="11" selected >Nov</option>
+		               {else}
+						<option  value="11">Nov</option>
+		               {/if}
+		               
+		               {if $eg_month == 12}
+						<option  value="12" selected>Dec</option>
+		               {else}
+						<option  value="12">Dec</option>
+		               {/if}
+					</select>
+           		</div>
+           		
+                <div style="padding:10px; float:left;">
+                    <select name="start_year" id="start_year" >
+                        <option value="">Select Year</option>
+                        <option >2012</option>
+						<option selected>2013</option>
+						<option >2014</option>
+						<option >2015</option>
+						<option >2016</option>
+						<option >2017</option>
+					</select>
+                </div>
+                
+                <div style="padding:10px; float:left;">
+                    <select name="start_session" id="start_session" >
+                        <option value="">Select Session</option>
+		               {if $session == 'FH'}
+                        <option value="FH" selected>FH</option>
+		               {else}
+                        <option value="FH">FH</option>
+		               {/if}
+		               
+		               {if $session == 'SH'}
+                        <option value="SH" selected>SH</option>
+		               {else}
+                        <option value="SH">SH</option>
+		               {/if}
+                    </select>
+                </div>
+                
+                
+                
+                
+            <div id="eg_session">
+                <div style="padding:10px; float:left;">
+	                <select name="end_month" id="end_month" >
+	                	<option value="" >Select Month</option>
+	                	
+		               {if $eg_month == 1}
+		               	<option selected>Jan</option>
+		               {else}
+	                    <option  value="1">Jan</option>
+		               {/if}
+		               {if $eg_month == 2}
+						<option  value="2" selected>Feb</option>
+		               {else}
+						<option  value="2">Feb</option>
+		               {/if}
+
+		               {if $eg_month == 3}
+						<option  value="3" selected>Mar</option>
+		               {else}
+						<option  value="3">Mar</option>
+		               {/if}
+						
+		               {if $eg_month == 4}
+						<option  value="4" selected>Apr</option>
+		               {else}
+						<option  value="4">Apr</option>
+		               {/if}
+
+		               {if $eg_month == 5}
+						<option  value="5" selected>May</option>
+		               {else}
+						<option  value="5">May</option>
+		               {/if}
+						
+		               {if $eg_month == 6}
+						<option  value="6" selected>Jun</option>
+		               {else}
+						<option  value="6">Jun</option>
+		               {/if}
+						
+		               {if $eg_month == 7}
+						<option  value="7" selected>Jul</option>
+		               {else}
+						<option  value="7">Jul</option>
+		               {/if}
+
+		               {if $eg_month == 8}
+						<option  value="8" selected>Aug</option>
+		               {else}
+						<option  value="8">Aug</option>
+		               {/if}
+						
+		               {if $eg_month == 9}
+						<option  value="9" selected>Sep</option>
+		               {else}
+						<option  value="9">Sep</option>
+		               {/if}
+						
+		               {if $eg_month == 10}
+						<option  value="10" selected>Oct</option>
+		               {else}
+						<option  value="10">Oct</option>
+		               {/if}
+						
+		               {if $eg_month == 11}
+						<option  value="11" selected >Nov</option>
+		               {else}
+						<option  value="11">Nov</option>
+		               {/if}
+		               
+		               {if $eg_month == 12}
+						<option  value="12" selected>Dec</option>
+		               {else}
+						<option  value="12">Dec</option>
+		               {/if}
+					</select>
+           		</div>
+           		
+                <div style="padding:10px; float:left;">
+                    <select name="end_year" id="end_year" >
+                        <option value="">Select Year</option>
+                        <option >2012</option>
+						<option selected>2013</option>
+						<option >2014</option>
+						<option >2015</option>
+						<option >2016</option>
+						<option >2017</option>
+					</select>
+                </div>
+                
+                <div style="padding:10px; float:left;">
+                    <select name="end_session" id="end_session" >
+                        <option value="">Select Session</option>
+		               {if $session == 'FH'}
+                        <option value="FH" selected>FH</option>
+		               {else}
+                        <option value="FH">FH</option>
+		               {/if}
+		               
+		               {if $session == 'SH'}
+                        <option value="SH" selected>SH</option>
+		               {else}
+                        <option value="SH">SH</option>
+		               {/if}
+                    </select>
+                </div>
+                
+			<div style="padding:8px; float:left;" id="gobtn">
+                <input type="submit" name="populate" id="populate" value="GO" class="whitishBtn button_small">
+            </div>
+          </div>
+          <input type="hidden" name="response" id="response" value="add"></input>
+          </form>           
+		</div>
+		
+</div>

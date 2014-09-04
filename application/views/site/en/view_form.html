@@ -1,0 +1,245 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+    	        
+<div class="one_wrap">
+   <div class="widget">
+ 		<div style="float: right; padding: 10px; width: 200px;">
+            {if $sess.user_type == 1 OR $sess.user_type == 2 }
+ 			<span><h5><a href="{$base_url}reports/Edit/{$id}" id='edit_form'>Edit</a> <a href="{$base_url}reports/Cancel/{$id}" id='cancel_form'>Cancel</a></h5></span>
+ 			{/if}
+ 			{if $message}
+         	<div class='alert-box success' >{$message}</div>
+         	{/if}
+ 		</div>
+   		<table>
+   			<tr>
+   				<td>
+   					<table border="1" bordercolor="grey" style="line-height: 2; margin-top:50px; margin-left:50px; margin-bottom:30px;"  >
+   						<tr >
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Ro. No <br \>( Office Use Only)&nbsp;&nbsp;&nbsp;</td>
+   							<td>&nbsp;&nbsp;&nbsp;{$data.ro_number}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Publication&nbsp;&nbsp;&nbsp;</td>
+   							<td>&nbsp;&nbsp;&nbsp;{$data.user_city}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Sales Person&nbsp;&nbsp;&nbsp;</td>
+   							<td>&nbsp;&nbsp;&nbsp;{$data.sales_person}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Authorised Person&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Date&nbsp;&nbsp;&nbsp;</td>
+   							<td>&nbsp;&nbsp;&nbsp;{$data.approve_date}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Special Instructions&nbsp;&nbsp;&nbsp;</td>
+   							<td>&nbsp;&nbsp;&nbsp;{$data.spl_instruction}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Approving Authority Name&nbsp;&nbsp;&nbsp;</td>
+   						</tr>   						
+   					</table>
+   				</td>
+   				<td width="1"></td>
+   				<td>
+   					<table border="1" style="line-height: 2">
+   						<tr>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Agency: &nbsp;&nbsp;&nbsp;</span>{$data.agency}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Company Name: &nbsp;&nbsp;&nbsp;</span>{$data.company_name}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Contact Person: &nbsp;&nbsp;&nbsp;</span>{$data.contact_person}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Address: &nbsp;&nbsp;&nbsp;</span>{$data.address}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Pin Code: &nbsp;&nbsp;&nbsp;</span>{$data.pincode}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Phone: &nbsp;&nbsp;&nbsp;</span>{$data.contact_no}&nbsp;&nbsp;&nbsp;</td>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Fax: &nbsp;&nbsp;&nbsp;</span>{$data.fix_no}&nbsp;&nbsp;&nbsp;</td>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Email: &nbsp;&nbsp;&nbsp;</span>{$data.email_id}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Name of Establishment being Advertised: &nbsp;&nbsp;&nbsp;</span>{$data.name_estalishment}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Description of Business Being Advertised: &nbsp;&nbsp;&nbsp;</span>{$data.category_name}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   					</table>
+   				
+   				</td>
+   				
+   			</tr>
+   			
+   			<tr>
+   				<td></td>
+   				<td></td>
+   				
+   				<td>
+   					<table border="1">
+   							<tr>
+   								<td style="line-height: 3; font-weight: bold;">&nbsp;&nbsp;&nbsp;Payment & Billing Schedule&nbsp;&nbsp;&nbsp;</td>
+   							</tr>
+   							<tr bgcolor="#000;" style="line-height: 3; color: #fff; font-weight: bold;">
+   								<td>&nbsp;&nbsp;&nbsp;Period&nbsp;&nbsp;&nbsp;</td>
+   								<td>&nbsp;&nbsp;&nbsp;Cheque / DD No&nbsp;&nbsp;&nbsp;</td>
+   								<td>&nbsp;&nbsp;&nbsp;Drawn On&nbsp;&nbsp;&nbsp;</td>
+   								<td>&nbsp;&nbsp;&nbsp;Dated&nbsp;&nbsp;&nbsp;</td>
+   								<td>&nbsp;&nbsp;&nbsp;Amount&nbsp;&nbsp;&nbsp;</td>
+   								<td>&nbsp;&nbsp;&nbsp;Payment Instructions&nbsp;&nbsp;&nbsp;</td>
+   							</tr>
+   							<tr style="line-height: 3;">
+   								<td></td>
+   								<td></td>
+   								<td></td>
+   								<td>&nbsp;&nbsp;&nbsp;{$data.approve_date}&nbsp;&nbsp;&nbsp;</td>
+   								<td></td>
+   								<td></td>
+   							</tr>
+   					</table>
+   				</td>
+   			</tr>
+   			
+   			<tr>
+  				<td>&nbsp;</td>
+  				<td>&nbsp;</td>
+   			</tr>
+   			
+   			<tr>
+   				<td></td>
+   				<td></td>
+   				<td>
+   					<table border="1">
+   						<tr>
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Payment to Favor :&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						<tr>
+   							<td style="font-weight: bold;">&nbsp;&nbsp;&nbsp;Total No Of Insertions :&nbsp;&nbsp;&nbsp;</td>
+   							<td>&nbsp;&nbsp;&nbsp; {$total_insertions.total_insertion}&nbsp;&nbsp;&nbsp;</td>
+   						</tr>
+   						
+   					</table>
+   				</td>
+   			</tr>
+   			
+   			<tr>
+  				<td>&nbsp;</td>
+  				<td>&nbsp;</td>
+   			</tr>
+   			{if $data.form_type eq 'EG'}
+   			<tr>
+				<td colspan="10">
+   					<table border="1">
+   						<tr style="font-weight: bold;">
+   							<td>City</td>
+   							<td>Code</td>
+   							<td>Rack Rate</td>
+   							<td>Insertions</td>
+   							<td>Offers Rate</td>
+			              {foreach from=$eg item=eg_data key=i}
+   							<td>&nbsp;&nbsp;&nbsp;{$eg_data}&nbsp;&nbsp;&nbsp;</td>
+			              {/foreach}
+   						</tr>
+   						
+   						<tr>
+							<td>{$data.user_city}</td>
+							<td>{$data.code}</td>
+							<td>{$data.rack_rate}</td>
+							<td>{$total_insertions.total_insertion}</td>
+							<td>{$data.offered_rate}</td>
+			              {foreach from=$eg item=eg_data key=i}
+			              	  {if $eg_data eq $data.publish_date}
+	   							<td>1</td>
+	   						{else}	
+	   							<td>0</td>
+	   						{/if}
+			              {/foreach}
+   						</tr>
+   					</table>
+				</td>
+   			</tr>
+   			{/if}
+   			
+   			
+   			{if $data.form_type eq 'EXEC'}
+   			<tr>
+				<td colspan="10">
+   					<table border="1">
+   						<tr style="font-weight: bold;">
+   							<td>City</td>
+   							<td>Code</td>
+   							<td>Rack Rate</td>
+   							<td>Insertions</td>
+   							<td>Offers Rate</td>
+			              {foreach from=$exec item=exec_data key=i}
+   							<td>&nbsp;&nbsp;&nbsp;{$exec_data}&nbsp;&nbsp;&nbsp;</td>
+			              {/foreach}
+   						</tr>
+   						
+   						<tr>
+							<td>{$data.user_city}</td>
+							<td>{$data.code}</td>
+							<td>{$data.rack_rate}</td>
+							<td>{$total_insertions.total_insertion}</td>
+							<td>{$data.offered_rate}</td>
+			              {foreach from=$exec item=exec_data key=i}
+			              	  {if $exec_data eq $data.publish_date}
+	   							<td>1</td>
+	   						{else}	
+	   							<td>0</td>
+	   						{/if}
+			              {/foreach}
+   						</tr>
+   					</table>
+				</td>
+   			</tr>
+   			{/if}
+   			
+   			
+   			{if $data.form_type eq 'DIGITAL'}
+   			<tr>
+				<td colspan="10">
+   					<table border="1">
+   						<tr style="font-weight: bold;">
+   							<td>Product</td>
+   							<td>Code</td>
+   							<td>Start Date</td>
+   							<td>End Date</td>
+   							<td>Insertions</td>
+   							<td>Rate</td>
+			              {foreach from=$digital item=digital_data key=i}
+   							<td>&nbsp;&nbsp;&nbsp;{$digital_data}&nbsp;&nbsp;&nbsp;</td>
+			              {/foreach}
+   						</tr>
+   						
+   						<tr>
+							<td>{$data.product}</td>
+							<td>{$data.code}</td>
+							<td>{$data.start_date}</td>
+							<td>{$data.end_date}</td>
+							<td>{$total_insertions.total_insertion}</td>
+							<td>{$data.offered_rate}</td>
+			              {foreach from=$digital item=digital_data key=i}
+			              	  {if $digital_data eq $data.publish_date}
+	   							<td>1</td>
+	   						{else}	
+	   							<td>0</td>
+	   						{/if}
+			              {/foreach}
+   						</tr>
+   					</table>
+				</td>
+   			</tr>
+   			{/if}
+   		</table>
+	</div>
+</div>
+</div>
+</div>

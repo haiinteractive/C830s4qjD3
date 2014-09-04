@@ -1,0 +1,55 @@
+
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+    	        
+<div class="one_wrap">
+   <div class="widget">
+   
+	 {include file='site/en/mis_filter.html'}
+
+      <div class="widget_body_table_top" style="padding:10px;">
+                    
+		  <div class="widget_body">
+		      <!--Activity Table-->
+		      <table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+				{if $datas}
+				
+			          <tr>
+			              <th width="12%">City</th>
+			              <th width="12%">Amount</th>
+			          </tr>
+			          <br />
+					    {foreach from=$datas item=infor}
+				          <tr style="text-align: center;">
+				             <td width="12%">{$infor.city}</td>
+				             <td width="12%">{$infor.offered_rate}</td>
+				          </tr>
+			            {/foreach} 
+			            
+			            
+		            {/if}
+		          <tr style="text-align: center;">
+		             <th width="12%"></th>
+		             <th width="12%"><b><a href="{$base_url}reports/view_report/?form_type={$product}&select_city={$city}&eg_month={$eg_month}&eg_year={$eg_year}&session={$session}&response=add">{$total_revenue.total_amount}</a></b></th>
+		          </tr>
+		         {else}
+				          <tr style="text-align: center;">
+				          	<td><h2>No Results Found</h2></td>
+				          </tr>
+		         {/if}
+	                       
+		      </table>
+		      {if $datas}
+		      <div class="action_bar">
+		          <a class="button_small whitishBtn" href="#"><span class="iconsweet">l</span>Export Table</a>
+		      </div>
+		      {/if}
+		  </div>
+      </div>
+	</div>   
+</section>
+</div>
+</body>
+
+<!-- Mirrored from thedemolabs.com/demo/explocity/IssuesReport2.php by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 07:22:30 GMT -->
+</html>

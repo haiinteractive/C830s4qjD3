@@ -1,0 +1,56 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+
+    	        
+<div class="one_wrap">
+    	<div class="widget">
+        	<div class="widget_title"><h5>Reports</h5></div>
+            <div class="widget_body_table_top" style="padding:10px;">
+            	{if $sess.user_type == 1 OR $sess.user_type == 2 }
+           		 <a style="margin:5px;" class="button_small whitishBtn" href="{$base_url}users/add_new_user/"><span class="iconsweet">}</span>Add Users</a>
+           		 {/if}
+                    
+		            <div class="widget_body">
+		            	<!--Activity Table-->
+		            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+		                    <tr>
+		                        <th width="4%">ID</th>
+		                        <th width="14%">User Name </th>
+		                        <th width="12%">User First Name</th>
+		                        <th width="14%">User Last Name</th>
+		                        <th width="12%">User Email</th>
+		                        <th width="10%">User Role</th>
+		                        <th width="8%">User Status</th>
+		                        <th width="14%">User IP</th>
+		                        {if $sess.user_type == 1}
+		                        <th width="12%">Actions</th>
+		                        {/if}
+		                    </tr>
+		                    <br />
+		                    
+			              {foreach from=$users_list item=users key=i}
+		                    <tr style="text-align: center;">
+		                        <td width="4%">{$users.user_id}</td>
+		                        <td width="14%">{$users.user_name}</td>
+		                        <td width="12%">{$users.user_first_name}</td>
+		                        <td width="14%">{$users.user_last_name}</td>
+		                        <td width="12%">{$users.user_name}</td>
+		                        <td width="10%">{$users.user_type_id}</td>
+		                        <td width="8%">User Status</td>
+		                        <td width="14%">{$users.user_allowed_ips}</td>
+		                        {if $sess.user_type == 1}
+		                        <td width="12%"><a href="{$base_url}users/EditUser/{$users.user_id}">Edit</a></td>
+		                        {/if}
+		                    </tr>
+	                       {/foreach} 
+	                       
+		                </table>
+						<div class="action_bar">
+		                </div>
+		          </div>
+          
+            </div>
+        </div>
+</div>
+</div>

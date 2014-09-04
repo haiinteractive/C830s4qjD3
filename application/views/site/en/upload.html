@@ -1,0 +1,51 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+    	        
+<div class="one_wrap">
+    	<div class="widget">
+        	<div class="widget_title"><h5>Upload Data</h5></div>
+            <div class="widget_body_table_top" style="padding:10px;">
+			<form name='upload_form' id='upload_form' method='POST' enctype="multipart/form-data" action="{$base_url}upload/Upload_Data/">
+            <table width="100%">
+    		{if $error}
+        		<div class='alert-box error'>{$error}</div>
+        	{/if}
+        	
+    		{if $success}
+        	<div class='alert-box success'>{$success}</div>
+    		{/if}
+                      
+    		{if $msg}
+        		<div class='alert-box error'>{$msg}</div>
+        	{/if}
+                      
+                      
+              <tr>
+                 <td width="26%" height="28" align="left" valign="middle">Form Type:</td>
+                 <td width="74%" align="left" valign="middle">
+                 <select name='form_type' id='form_type'>
+                 	<option>EG</option>
+                 	<option>EXEC</option>
+                 	<option>DIGITAL</option>
+                 </select></td>
+             </tr>
+              <tr>
+                 <td width="26%" height="28" align="left" valign="middle">Form Type:</td>
+                 <td width="74%" align="left" valign="middle"><input type='file' name='datas' id='datas' /></td>
+             </tr>
+             <tr>
+               <td>&nbsp;</td>
+               <td><input type='submit' name='add_new_category_btn' id='add_new_category_btn' value='Upload' class='btnLogin' style="float: left;"/></td>
+             </tr>
+                              
+            </table>
+             </form>
+            </div>
+        </div>
+</div>
+	
+       
+</div>
+</section>
+</div>

@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+
+<html>
+
+
+<!-- Mirrored from thedemolabs.com/demo/explocity/ExecForm.php by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 07:22:29 GMT -->
+<head>
+
+
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+<title>Explocity-Home Page</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+<!--Stylesheets-->
+
+<link rel="stylesheet" href="css/reset.css" />
+
+<link rel="stylesheet" href="css/main.css" />
+
+<link rel="stylesheet" href="css/typography.css" />
+
+<link rel="stylesheet" href="css/tipsy.css" />
+
+<link rel="stylesheet" href="js/cl_editor/jquery.cleditor.html" />
+
+<link rel="stylesheet" href="uploadify/uploadify.html" />
+
+<link rel="stylesheet" href="css/jquery.ui.all.css" />
+
+<link rel="stylesheet" href="css/fullcalendar.css" />
+
+<link rel="stylesheet" href="css/bootstrap.css" />
+
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" />
+
+<link rel="stylesheet" href="css/highlight.css" />
+
+<!--[if lt IE 9]>
+
+    <script src="js/html5.js"></script>
+
+    <![endif]-->
+
+<!--Javascript-->
+
+<script type="text/javascript" src="js/jquery.min.js"> </script>
+
+<script type="text/javascript" src="js/highcharts.js"> </script>
+
+<script type="text/javascript" src="js/exporting.js"> </script>
+
+<script type="text/javascript" src="js/jquery.quicksand.js"> </script>
+
+<script type="text/javascript" src="js/jquery.easing.1.3.js"> </script>
+
+<script type="text/javascript" src="js/jquery.tipsy.js"> </script>
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+
+<script type="text/javascript" src="js/jquery.ui.progressbar.js"></script>
+
+<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+
+<script type="text/javascript" src="js/jquery.ui.tabs.js"></script>
+
+<script type="text/javascript" src="js/fullcalendar.js"></script>
+
+<script type="text/javascript" src="js/gcal.js"></script>
+
+<script type="text/javascript" src="js/bootstrap-modal.js"></script>
+
+<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+<script type="text/javascript" src="js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+
+<script type="text/javascript" src="js/jquery.ui.autocomplete.js"></script>
+
+<script type="text/javascript" src="js/jquery.validationEngine-en.js"></script>
+
+<script type="text/javascript" src="js/jquery.validationEngine.js"></script>
+
+<script type="text/javascript" src="js/main.js"> </script>
+
+
+
+<script>
+
+
+
+
+
+
+
+$('.del').live('click',function(){
+
+$(this).parent().parent().remove();
+
+$('#rowcount').val(--row);
+
+var check=$('#roform  :checkbox').filter(":checked").length;
+
+
+
+$('#Total_Insertions').val(check);
+
+});
+
+
+
+
+
+
+
+var row=1;
+
+var inc=0;
+
+$('.add').live('click',function(){
+
+	
+
+	$('#roform #row1 :checkbox').attr("title","My Link Title");
+
+	
+
+    $('#rowcount').val(++row);
+
+	$(this).val('Delete');
+
+	$(this).attr('class','del');
+
+	++inc;
+
+	var idText="row"+inc.toString()+"[]";
+
+	var rowid="row"+inc.toString();
+
+	var appendTxt ="<tr class='addr' id='"+rowid+"'><td><select name='publish_AddType_"+rowid+"'  id='"+inc.toString()+"' title='EXEC' class='validate[required] AddType'><option value=''>Select</option><option>BC</option><option>FIC</option><option>BIC</option><option>PP</option><option>FP</option><option>DS</option><option>GF</option><option>HPH</option><option>HPV</option><option>QPH</option></select></td><td><input type='text' size='3' id='RackRate"+inc.toString()+"' name='RackRate_"+rowid+"'  maxlength='3'></td><td><input name='inseration_"+rowid+"' type='text' id='inseration"+inc.toString()+"' class='inseration"+inc.toString()+"' size='2' /></td><td><input name='OfferRate_"+rowid+"' type='text' id='OfferRate"+inc.toString()+"' class='validate[required] OfferRate_row' size='2' /><input type='hidden' id='total"+inc.toString()+"' class='total'></td> <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Nov2013'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Dec2013'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Jan2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Feb2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Mar2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Apr2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='May2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Jun2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Jul2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Aug2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Sep2014'></td>  <td><input type='checkbox' class='checkrow"+inc.toString()+"' name='"+idText+"' value='Oct2014'></td> <td><input type='button' class='add' value='Add' /></td></tr>";
+
+	$(".addr:last").after(appendTxt);	
+
+			});
+
+</script>
+
+<meta charset="UTF-8"></head>
+
+<body>
+
+<!--Header-->
+
+<header>
+
+    <!--Logo-->
+
+    <div id="logo"><a href="#"><img src="images/logo.png" alt="" width="200" height="50" /></a></div>
+
+    
+
+</header>
+
+<!--Dreamworks Container-->
+
+<div id="dreamworks_container">
+
+
+
+<!--Main Content-->
+
+<section id="main_content">
+
+<!--Secondary Navigation-->
+
+<nav id="secondary_nav"> 
+
+<!--UserInfo-->
+
+<dl class="user_info">
+
+	
+
+    <dd>
+
+    <a class="welcome_user" href="#">Welcome,<strong></strong></a>
+
+    <span class="log_data">Last sign in : <br />
+<b>Warning</b>:  mysql_query() [<a href='function.html'>function.mysql-query</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in <b>/home/content/38/9405438/html/demo/explocity/functions/GlobalFunctions.php</b> on line <b>114</b><br />
+<br />
+<b>Warning</b>:  mysql_query() [<a href='function.html'>function.mysql-query</a>]: A link to the server could not be established in <b>/home/content/38/9405438/html/demo/explocity/functions/GlobalFunctions.php</b> on line <b>114</b><br />
+<br />
+<b>Warning</b>:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in <b>/home/content/38/9405438/html/demo/explocity/functions/GlobalFunctions.php</b> on line <b>115</b><br />
+</span>
+
+    <a class="logout" href="index.html?logout">Logout</a>
+
+   
+
+    </dd>
+
+</dl>
+
+<ul>
+	<li><a href="RoFormsList.html"><span class="iconsweet">a</span>Release Order Form</a></li>
+    <li><a href="Reports.html"><span class="iconsweet">k</span>Report</a></li>
+    <li><a href="ManageUsers.html"><span class="iconsweet">o</span>Manage Users</a></li>
+    <li><a href="ManageCompanies.html"><span class="iconsweet">o</span>Manage Companies</a></li>
+    <li><a href="ChangePassword.html"><span class="iconsweet">S</span>Change Password</a></li>
+</ul>
+</nav>
+
+<!--Content Wrap-->
+
+<div id="content_wrap">	<!--Activity Stats-->
+
+<form action="#" method="post" id="roform" name='roform'>
+<input type="hidden" name="form_type" value="EXEC">
+<div class="one_wrap">
+
+    	<div class="widget">
+
+        	<div class="widget_title">
+        	  <h5>EXEC Release Order Form</h5></div>
+
+            <div class="widget_body_table_top" style="padding:10px;">
+
+            	<!--Activity Table-->
+
+         
+
+         <input type="hidden" name="rowcount" id="rowcount" value="1">      
+
+         <table width="100%" border="0" cellspacing="0" cellpadding="8" >
+
+         <tr>
+
+         <td width="26%" ><div align="right">Company Name :</div></td>
+
+         <td width="12%" class=""><input name="company_name" type="text" class="validate[required]" id="company_name" size="30" /></td>
+
+         <td width="13%"> <input type="button" class="go_populate" value="Go"  > </td>
+
+         <td width="22%"><div align="right">RO Number (Official use only)</div></td>
+
+         <td width="27%"><input name="RO_Number" type="text" id="textfield8"  size="22" value="<br />
+<b>Warning</b>:  mysql_query() [<a href='function.html'>function.mysql-query</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in <b>/home/content/38/9405438/html/demo/explocity/functions/GlobalFunctions.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  mysql_query() [<a href='function.html'>function.mysql-query</a>]: A link to the server could not be established in <b>/home/content/38/9405438/html/demo/explocity/functions/GlobalFunctions.php</b> on line <b>22</b><br />
+<br />
+<b>Warning</b>:  mysql_num_rows() expects parameter 1 to be resource, boolean given in <b>/home/content/38/9405438/html/demo/explocity/functions/GlobalFunctions.php</b> on line <b>23</b><br />
+1" readonly /></td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Contact Person :</div></td>
+
+           <td colspan="2"><input name="textfield2" disabled="disabled" type="text" id="contact_person_hide" size="30" value="" /></td>
+
+           <td><div align="right">City:</div></td>
+
+           <td><select name="user_city" id="user_city" class="validate[required]">
+
+                    <option value="">Select</option>
+
+                    <option> Hyderabad</option>
+
+                    <option>Bangalore</option>
+
+                    <option>Mumbai</option>
+
+                    <option>Chennai</option>
+
+                    <option>Kolkata</option>
+
+                    <option>Delhi</option>
+
+                </select></td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Address :</div></td>
+
+           <td colspan="2"><textarea name="textarea" disabled="disabled" id="address_hide" cols="24" rows="3"></textarea></td>
+
+           <td><div align="right">Sales Person:</div></td>
+
+           <td><select name="Sales_Person" id="Sales_Person" class="validate[required]" >
+
+                                <option value="">Select</option>
+
+                                  <option value="Suresh" >Suresh</option>
+
+                                  <option value="Rajesh">Rajesh</option>
+
+                                  <option value="Anand">Anand</option>
+
+                                  <option value="Lavanya">Lavanya</option>
+
+                                  <option value="Sachin">Sachin</option>
+
+                                  <option value="Kumar">Kumar</option>
+
+                </select></td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Pin Code:</div></td>
+
+           <td colspan="2"><input name="textfield4" disabled="disabled" type="text" id="pin_hide" size="30" value="" /></td>
+
+           <td><div align="right">Approving Authonity:</div></td>
+
+           <td><select name="Approving_Authonity" id="jumpMenu2" class="validate[required]" >
+
+                                     <option value="">Select</option>
+
+                                  <option>Suresh</option>
+
+                                  <option>Rajesh</option>
+
+                                  <option>Anand</option>
+
+                                  <option>Lavanya</option>
+
+                                  <option>Sachin</option>
+
+                                  <option>Kumar</option>
+
+                                  </select></td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Phone :</div></td>
+
+           <td colspan="2"><input name="textfield5" type="text" disabled="disabled" id="phone_hide" size="30" value="" /></td>
+
+           <td><div align="right">Date :</div></td>
+
+           <td><input name="approve_date" type="text"  id="textfield10" size="20" value="02 /10 /2013" readonly  /></td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Email :</div></td>
+
+           <td colspan="2"><input name="textfield6" type="text" disabled="disabled" id="email_hide" size="30" value="" /></td>
+
+           <td>&nbsp;</td>
+
+           <td>&nbsp;</td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Name of Establishment Being Advertised :</div></td>
+
+           <td colspan="2"><input name="Name_Establishment" type="text" id="NameOfEstablishment" size="30" value="" /></td>
+
+           <td>&nbsp;</td>
+
+           <td>&nbsp;</td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Category of Business Being Advertised :</div></td>
+
+           <td colspan="2"><select name="Category_Business" id="Category_Business123" class="validate[required]"  >
+
+        <option value="">Select Category</option>
+
+                                  <option> Business </option>
+
+                                  <option>Shopping </option>
+
+                                  <option>Body & Soul  </option>
+
+                                  <option>Hotels  </option>
+
+                                  <option>Eating Out  </option>
+
+                                  <option>Nightlife  </option>
+
+                                  <option>Others  </option>
+
+                                  <option>Special </option>
+
+                                  </select></td>
+
+           <td>&nbsp;</td>
+
+           <td>&nbsp;</td>
+
+         </tr>
+
+         </table>
+
+            </div>
+
+		</div>
+
+</div>
+
+
+
+    	        
+
+<!--One_Wrap-->
+
+ 	<div class="one_wrap">
+
+    	<div class="widget">
+
+        	
+
+            <div class="widget_body">
+
+            	<!--Activity Table-->
+
+                
+
+            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+
+                    <tr >
+
+                       
+
+                        <th>Code</th>
+
+                        <th>Rack Rate</th>
+						 <th>Insertions</th>
+
+                        <th>Offered rate</th>
+                         <th>Nov2013</th><th>Dec2013</th><th>Jan2014</th><th>Feb2014</th><th>Mar2014</th><th>Apr2014</th><th>May2014</th><th>Jun2014</th><th>Jul2014</th><th>Aug2014</th><th>Sep2014</th><th>Oct2014</th>
+                       
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                    <tr class="addr" id="row0">
+
+                   
+
+                    <td>
+
+                    <select name="publish_AddType_row0"  id="0" class="validate[required] AddType" title="EXEC">
+
+                                      <option value="">Select</option>
+
+                                     <br />
+<b>Warning</b>:  mysql_query() [<a href='function.html'>function.mysql-query</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in <b>/home/content/38/9405438/html/demo/explocity/ExecForm.php</b> on line <b>595</b><br />
+<br />
+<b>Warning</b>:  mysql_query() [<a href='function.html'>function.mysql-query</a>]: A link to the server could not be established in <b>/home/content/38/9405438/html/demo/explocity/ExecForm.php</b> on line <b>595</b><br />
+<br />
+<b>Warning</b>:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in <b>/home/content/38/9405438/html/demo/explocity/ExecForm.php</b> on line <b>596</b><br />
+
+                                      </select>
+
+                    </td>
+
+                    <td>
+
+                    <input type='text' size="3" maxlength="3" id="RackRate0" name="RackRate_row0" readonly>
+
+                    </td>
+                        <td><input name="inseration_row0" type="text" id="inseration0" class="inseration0" size="2" readonly /></td>
+                        
+                                            <td><input name="OfferRate_row0" type="text" id="OfferRate0" class="validate[required] OfferRate_row" size="2" /><input type='hidden' id='total0' class='total'></td>
+                    
+
+                    <td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Nov2013'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Dec2013'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Jan2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Feb2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Mar2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Apr2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='May2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Jun2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Jul2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Aug2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Sep2014'></td><td><input type='checkbox' name='row0[]' class='checkrow0' id='msn' value='Oct2014'></td>
+                    
+
+                    <td><input type="button" class="add" value="Add" /></td>
+
+                    </tr>                   
+
+                </table>
+
+				 
+
+            </div>
+
+            
+
+        </div>
+
+    </div>          
+
+	<div class="msgbar msg_Error hide_onC" style="display:none;">
+
+       <span class="iconsweet">X</span><p>Please enter offer rate less then rack rate...</p>
+
+    </div>
+     <div class="msgbar msg_Alert hide_onC" style="display:none;">
+       <span class="iconsweet">!</span><p>This is a Warning message.</p>
+     </div>
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="8">
+
+    <tr>
+
+      <td width="14%">&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+    </tr>
+
+    <tr>
+
+      <td width="14%">Special Instruction</td>
+
+    <td width="62%"> <div align="right">Total No of Insertions </div></td>
+
+    <td width="15%"><div align="right">
+
+      <input name="total_insertions" type="text" readonly id="Total_Insertions" size="21" />
+
+    </div></td>
+
+    </tr>
+
+    <tr>
+
+      <td width="14%"> <textarea name="Special_Instruction" id="Special_Instruction" cols="38" rows="2"></textarea></td>
+
+      <td align="right"><div align="right">Nett Payable Rs</div></td>
+
+      <td><div align="right">
+
+        <input name="Net_Pay" type="text" id="Net_Pay" class="validate[required]" readonly  size="21" />
+
+      </div></td>
+
+      <td width="9%"><div align="right">
+
+        <input type="button" id="calculate_netpay" value="calculate">
+
+      </div></td>
+
+    </tr>
+
+    <tr>
+
+      <td>&nbsp;</td>
+
+      <td align="right"><div align="center">
+
+        <input type="submit" value="Save Ro Form" name="Exec_Roform_submit" id="Exec_Roform_submit">
+
+      </div></td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+    </tr>
+
+    </table>
+
+      
+
+</div>
+
+</div>
+
+ </form>
+
+
+
+
+
+
+
+
+
+
+
+<a class="whitishBtn button_small" style="display:none;" data-toggle="modal" href="#myModal" >Launch Basic Modal</a> 
+
+	<!--Basic Modal Start-->
+
+	<div class="modal hide" id="myModal" >
+
+    <div class="modal-header">
+
+    <a class="close" data-dismiss="modal">×</a>
+
+    <h3>Add company</h3>
+
+    </div>
+
+    <div class="modal-body">
+
+    <div id="message" style="font-weight:bold; color:#F00; padding:10px;" ></div>
+
+    <form id="addcompany" method="post" action="#">
+
+            <table width="100%">
+
+                            
+
+              <tr>
+
+                                <td width="26%" height="28" align="left" valign="middle">Company Name :</td>
+
+                                <td width="74%" align="left" valign="middle"><input name="contact_person" type="text" readonly id="CompanyName" size="30" class="validate[required]" value="" /></td>
+
+                              </tr>
+
+<tr>
+
+                                <td width="26%" height="28" align="left" valign="middle">Contact Person :</td>
+
+                                <td width="74%" align="left" valign="middle"><input name="contact_person" type="text" id="ContactPerson"  size="30" value="" /><p><span id="ContactPersoninfo" style="color:#F00; display:none;">This field is required!</span></p></td>
+
+                              </tr>
+
+                              <tr>
+
+                                <td height="30" align="left" valign="middle">Address :</td>
+
+                                <td align="left" valign="middle"><textarea name="CompanyAddress" id="CompanyAddress" cols="40"  rows="3"></textarea><p><span id="CompanyAddressinfo" style="color:#F00; display:none;">This field is required!</span></p></td>
+
+                              </tr>
+
+                              <tr>
+
+                                <td height="25" align="left" valign="top">&nbsp;</td>
+
+                                <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+                                  <tr>
+
+                                    <td height="10" colspan="4"></td>
+
+                                  </tr>
+
+                                  <tr>
+
+                                    <td width="16%" height="25" align="left" valign="middle">Pin Code</td>
+
+                                    <td width="28%" align="left" valign="middle"><input name="CompanyPincode"  type="text" id="CompanyPincode" size="13" value="" /><p><span id="CompanyPincodeinfo" style="color:#F00; display:none;">This field is required!</span></p></td>
+
+                                  </tr>
+
+                                  <tr>
+
+                                    <td height="10" colspan="4" align="left" valign="middle"></td>
+
+                                  </tr>
+
+                                </table></td>
+
+                              </tr>
+
+                              <tr>
+
+                                <td height="28" align="left" valign="bottom">Phone :</td>
+
+                                <td align="left" valign="bottom"><input name="CompanyPhone"  type="text" id="CompanyPhone" size="30" value="" /> <p><span id="CompanyPhoneinfo" style="color:#F00; display:none;">This field is required!</span></p></td>
+
+                              </tr>
+
+                              <tr>
+
+                                <td height="28" align="left" valign="bottom">Email :</td>
+
+                                <td align="left" valign="bottom"><input name="CompanyEmail" type="text" id="CompanyEmail" size="30" value="" /> <p><span id="CompanyEmailinfo" style="color:#F00; display:none;">This field is required!</span></p></td>
+
+                              </tr>
+
+                              
+
+            </table>
+
+            </form>
+
+    </div>
+
+    <div class="modal-footer">
+
+    <a data-dismiss="modal" class="greyishBtn button_small" href="#">Close</a>
+
+    <a href="#" class="bluishBtn button_small" id="AddCompanyBtn">Save changes</a>
+
+    </div>
+
+    </div>
+
+    <!--Basic Modal End-->
+
+
+
+
+
+
+
+</body>
+
+
+<!-- Mirrored from thedemolabs.com/demo/explocity/ExecForm.php by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 07:22:29 GMT -->
+</html>

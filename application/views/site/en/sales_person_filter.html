@@ -1,0 +1,44 @@
+<script type="text/javascript" src="{$static_server}files/js/jquery.ui.datepicker.js"></script>
+
+<div class="widget_title">
+          <!-- Exec selection -->
+		<form action="{$base_url}reports/SalesP_Report/" method="get" id="execreport" name="execreport">
+          <div id="exec1_session">
+          
+          	<input type="hidden" name="form_type" id="form_type" class="form_type"/>
+               <div style="padding:10px; float:left;">
+		            <strong>Sales Person:</strong>
+	<select name="Sales_Person" id="Sales_Person" >
+	
+	                  <option value="">Select</option>
+	                  
+				    {foreach from=$users item=user key=i}
+				    	{if $user.user_type_id eq 3}
+					    	{if $user.user_id eq $Sales_Person}
+		                  		<option value="{$user.user_first_name}" selected>{$user.user_first_name}</option>
+		                  	{else}
+		                  		<option value="{$user.user_first_name}">{$user.user_first_name}</option>
+		                  	{/if}
+	                  	{/if}
+					{/foreach}
+	                </select>
+                </div>
+                
+                <div style="padding:10px; float:left;">
+		            <strong>Start Date:</strong>
+		            <input type='text' name='start_date' id='start_date' class='datepick'/>
+                </div>
+                
+                <div style="padding:10px; float:left;">
+		            <strong>End Date:</strong>
+		            <input type='text' name='end_date' id='end_date' class='datepick'/>
+                </div>
+
+				<div style="padding:8px; float:left;" id="gobtn">
+	                <input type="submit" name="populate" id="populate" value="GO" class="whitishBtn button_small">
+	            </div>
+	          </div>
+	          <input type="hidden" name="response" id="response" value="add"></input>
+		  </form>
+
+</div>

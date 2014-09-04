@@ -1,0 +1,49 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+
+    	        
+<div class="one_wrap">
+    	<div class="widget">
+        	<div class="widget_title"><h5>AdType</h5></div>
+            <div class="widget_body_table_top" style="padding:10px;">
+		       {if $sess.user_type == 1 OR  $sess.user_type == 2}            
+           		 <a style="margin:5px;" class="button_small whitishBtn" href="{$base_url}home/AddAdType/"><span class="iconsweet">}</span>Add New AdType</a>
+               {/if}     
+		            <div class="widget_body">
+		            	<!--Activity Table-->
+		            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+		                    <tr>
+		                        <th width="4%">ID</th>
+		                        <th width="14%">Form Type</th>
+		                        <th width="12%">Code Type</th>
+		                        <th width="14%">Code</th>
+		                        <th width="14%">Rack Rate</th>
+						       {if $sess.user_type == 1}
+		                        <th width="14%">Action</th>
+								{/if}
+		                    </tr>
+		                    <br />
+		                    
+			              {foreach from=$adtype_list item=adtype key=i}
+		                    <tr style="text-align: center">
+		                        <td width="4%">{$adtype.code_id}</td>
+		                        <td width="14%">{$adtype.form_type}</td>
+		                        <td width="12%">{$adtype.code_type}</td>
+		                        <td width="12%">{$adtype.code}</td>
+		                        <td width="14%">{$adtype.rack_rate}</td>
+						       {if $sess.user_type == 1}            
+		                        <td width="14%"><a href="{$base_url}users/EditAdType/{$adtype.code_id}">Edit</a></td>
+		                       {/if}
+		                    </tr>
+	                       {/foreach} 
+	                       
+		                </table>
+						<div class="action_bar">
+		                </div>
+		          </div>
+          
+            </div>
+        </div>
+</div>
+</div>

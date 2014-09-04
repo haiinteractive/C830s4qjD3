@@ -1,0 +1,97 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+
+    	        
+<div class="one_wrap">
+   <div class="widget">
+   
+	 {include file='site/en/client_filter.html'}
+
+            <div class="widget_body_table_top" style="padding:10px;">
+                    
+		            <div class="widget_body">
+		            	<!--Activity Table-->
+		            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+		                    <tr>
+		                        <th width="10%">SALES BOOKING FOR DISPLAY</th>
+		                        <th></th>
+		                        <th></th>
+		                        <th rowspan="4" colspan="7">BTF Publishing</th>
+		                        <th colspan="3">TOTAL TURNOVER</th>
+		                        <th>Rs. {$total_revenue.total_turnover}</th>
+		                    </tr>
+		                    
+		                    <tr>
+		                        <th>EXPLOCITY GUIDE</th>
+		                        <th></th>
+		                        <th>Bangalore</th>
+		                        <th colspan="3">NET REVENUE</th>
+		                        <th>Rs. {$total_revenue.total_amount}</th>
+		                    </tr>
+
+		                    <tr>
+		                        <th>ISSUE DATED</th>
+		                        <th>{$eg_month} - {$eg_year}</th>
+		                        <th></th>
+		                        <th colspan="3">TOTAL DISCOUNT / AGENCY</th>
+		                        <th>Rs. {$total_revenue.total_turnover-$total_revenue.total_amount}</th>
+		                    </tr>
+		                    
+		                    <tr>
+		                        <th></th>
+		                        <th></th>
+		                        <th></th>
+		                        <th colspan="3">TOTAL PERCENTAGE OF SALE INCLD AGENCY</th>
+		                        <th>Rs</th>
+		                    </tr>
+		                    <tr style="text-align: center;">
+		                    	<th>RO NO</th>
+		                    	<th>CLIENT ( AGENT & CLIENT )</th>
+		                    	<th>TYPE</th>
+		                    	<th>SP</th>
+		                    	<th>QTY</th>
+		                    	<th>CAT</th>
+		                    	<th>CR</th>
+		                    	<th>RACK RATE</th>
+		                    	<th>DISC</th>
+		                    	<th>DISCOUNT</th>
+		                    	<th>NET RATE</th>
+		                    	<th>ACOM%</th>
+		                    	<th>ACOM</th>
+		                    	<th>NET BILL</th>
+		                    </tr>
+			              {foreach from=$datas item=infor}
+		                    <tr style="text-align: center;">
+		                        <td>{$infor.ad_data_id}</td>
+		                        <td>{$infor.company_name}</td>
+		                        <td>{$infor.publish_type}</td>
+		                        <td>{$infor.sales_person}</td>
+		                        <td>1</td>
+		                        <td>{$infor.category}</td>
+		                        <td></td>
+		                        <td>{$infor.rack_rate}</td>
+		                        <td></td>
+		                        <td>{$infor.rack_rate-$infor.offered_rate}</td>
+		                        <td>{$infor.offered_rate}</td>
+		                        <td></td>
+		                        <td>{$infor.offered_rate}</td>
+		                    </tr>
+	                       {/foreach} 
+	                       
+		                </table>
+						<div class="action_bar">
+		                    <a class="button_small whitishBtn" href="#"><span class="iconsweet">l</span>Export Table</a>
+		                </div>
+		          </div>
+          
+            </div>
+
+
+	</div>   
+</section>
+</div>
+</body>
+
+<!-- Mirrored from thedemolabs.com/demo/explocity/IssuesReport2.php by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 07:22:30 GMT -->
+</html>

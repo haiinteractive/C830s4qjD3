@@ -1,0 +1,51 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+    	        
+<div class="one_wrap">
+    	<div class="widget">
+        	<div class="widget_title"><h5>Edit AdType</h5></div>
+            <div class="widget_body_table_top" style="padding:10px;">
+			<form name='edit_adtype_form' id='edit_adtype_form' method='POST' >
+            <table width="100%">
+       	<div class='alert-box error' style="display: none;"></div>
+        	<div class='alert-box success' style="display: none;"></div>
+                             
+              <tr>
+                 <td width="26%" height="28" align="left" valign="middle">Form Type:</td>
+                 <td width="74%" align="left" valign="middle">
+                 	<select name='form_type' id='form_type'>
+                 		<option value='1'>Exec</option>
+                 		<option value='2'>EG</option>
+                 		<option value='3'>Digital</option>
+                 	</select></td>
+             </tr>
+			 <tr>
+                 <td width="26%" height="28" align="left" valign="middle">Ad Type Name :</td>
+                 <td width="74%" align="left" valign="middle"><input name="code_type" type="text" id="code_type"  size="30" value="{$adtypeinfo.code_type}" /><p><span id="ContactPersoninfo" style="color:#F00; display:none;"></span></p></td>
+             </tr>
+             <tr>
+                 <td height="30" align="left" valign="middle">AdType Code :</td>
+                 <td align="left" valign="middle"><input name="codes" type="text" id="codes"  size="30" value="" /><p><span id="CompanyAddressinfo" style="color:#F00; display:none;"></span></p></td>
+             </tr>
+             
+             <tr>
+                 <td height="30" align="left" valign="middle">AdType Rack Rate:</td>
+                 <td align="left" valign="middle"><input name="rack_rate" type="text" id="rack_rate"  size="30" value="" /><p><span id="CompanyAddressinfo" style="color:#F00; display:none;"></span></p></td>
+             </tr>
+             
+             <tr>
+               <td>&nbsp;</td>
+               <td><input type="submit" id="add_adtype_btn" name='add_adtype_btn' value="Add New AdType" class='btnLogin' style="float: left;"></td>
+             </tr>
+                              
+            </table>
+             </form>
+            </div>
+        </div>
+</div>
+	
+       
+</div>
+</section>
+</div>

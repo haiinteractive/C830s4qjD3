@@ -1,0 +1,7 @@
+{if $sess.user_type == 'D'}
+	{include file='site/en/home.html'}
+{elseif $sess.user_type == 'E'}
+	{include file='site/en/client.html'}
+{else}
+	{include file='site/en/home.html'}
+{/if}

@@ -1,0 +1,47 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+
+    	        
+<div class="one_wrap">
+    	<div class="widget">
+        	<div class="widget_title"><h5>Reports</h5></div>
+            <div class="widget_body_table_top" style="padding:10px;">
+		       {if $sess.user_type == 1 OR  $sess.user_type == 2}            
+           		 <a style="margin:5px;" class="button_small whitishBtn" href="{$base_url}users/add_new_category/"><span class="iconsweet">}</span>Add New Categories</a>
+               {/if}     
+		            <div class="widget_body">
+		            	<!--Activity Table-->
+		            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+		                    <tr>
+		                        <th width="4%">ID</th>
+		                        <th width="14%">Category Name</th>
+		                        <th width="12%">Category Created On</th>
+		                        <th width="14%">Category Status</th>
+						       {if $sess.user_type == 1}
+		                        <th width="14%">Action</th>
+								{/if}
+		                    </tr>
+		                    <br />
+		                    
+			              {foreach from=$categories_list item=category key=i}
+		                    <tr style="text-align: center">
+		                        <td width="4%">{$category.category_id}</td>
+		                        <td width="14%">{$category.category_name}</td>
+		                        <td width="12%">{$category.category_created_on}</td>
+		                        <td width="14%">{$category.category_is_active}</td>
+						       {if $sess.user_type == 1}            
+		                        <td width="14%"><a href="{$base_url}users/EditCategory/{$category.category_id}">Edit</a></td>
+		                       {/if}
+		                    </tr>
+	                       {/foreach} 
+	                       
+		                </table>
+						<div class="action_bar">
+		                </div>
+		          </div>
+          
+            </div>
+        </div>
+</div>
+</div>

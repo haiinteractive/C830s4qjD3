@@ -1,0 +1,59 @@
+
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+    	        
+<div class="one_wrap">
+   <div class="widget">
+   
+	 {include file='site/en/client_filter.html'}
+
+      <div class="widget_body_table_top" style="padding:10px;">
+                    
+		  <div class="widget_body">
+		      <!--Activity Table-->
+		      <table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+
+		          <tr>
+		              <th>Ro. No</th>
+		              <th>Client Name</th>
+		              <th>Category</th>
+		              <th>Ad Booked Publication</th>
+		              <th>Instructions</th>
+		              <th>Address</th>
+		              <th>Phone Number</th>
+		              <th>Contact Person</th>
+		          </tr>
+		          <br />
+				{if $datas}
+				  {foreach from=$datas item=infor}
+				  <tr style="text-align: center;">
+				      <td><a href="{$base_url}reports/Views/{$infor.ro_number}">{$infor.ro_number}</a></td>
+				      <td>{$infor.company_name}</td>
+				      <td>{$infor.category_name}</td>
+				      <td>{$infor.user_city}</td>
+				      <td>{$infor.spl_instruction}</td>
+				      <td>{$infor.address}</td>
+				      <td>{$infor.contact_no}</td>
+				      <td>{$infor.contact_person}</td>
+				  </tr>
+				  {/foreach}
+		         {else}
+				          <tr style="text-align: center;">
+				          	<td><h2>No Results Found</h2></td>
+				          </tr>
+		         {/if}
+	                       
+		      </table>
+		      {if $datas}
+		      <div class="action_bar">
+		      </div>
+		      {/if}
+		  </div>
+      </div>
+	</div>   
+</section>
+</div>
+</body>
+
+<!-- Mirrored from thedemolabs.com/demo/explocity/IssuesReport2.php by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 02 Oct 2013 07:22:30 GMT -->
+</html>

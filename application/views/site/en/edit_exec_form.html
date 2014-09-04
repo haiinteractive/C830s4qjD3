@@ -1,0 +1,356 @@
+
+<script type="text/javascript" src="{$static_server}files/js/exporting.js"> </script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.quicksand.js"> </script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.easing.1.3.js"> </script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.tipsy.js"> </script>
+
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.ui.core.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.ui.widget.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.ui.mouse.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.ui.progressbar.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.ui.datepicker.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.ui.tabs.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/fullcalendar.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/gcal.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/bootstrap-modal.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+
+<script type="text/javascript" src="{$static_server}files/js/jquery.ui.autocomplete.js"></script>
+
+
+
+<!--Content Wrap-->
+
+<div id="content_wrap">	<!--Activity Stats-->
+
+<form action="{$base_url}updates/Exec_Form/" method="post" id="roform" name='roform'>
+<input type="hidden" name="form_type" value="EXEC">
+<input type="hidden" name="response" value="add">
+<input type="hidden" name="pub_id" value="{$single_data.pub_information_id}">
+<div class="one_wrap">
+		{if $success}
+			<span class="alert-box success" style="align: center;">{$success}</span>         
+		{/if}
+
+    	<div class="widget">
+
+        	<div class="widget_title">
+        	  <h5>EXEC Release Order Form</h5></div>
+
+            <div class="widget_body_table_top" style="padding:10px;">
+
+            	<!--Activity Table-->
+
+         <input type="hidden" name="rowcount" id="rowcount" value="2">      
+
+         <table width="100%" border="0" cellspacing="0" cellpadding="8" >
+
+         <tr>
+
+         <td width="26%" ><div align="right">Company Name :</div></td>
+
+         <td width="12%" class="">
+			<select name='company_name' id='company_name'>
+				<option value='' disabled selected >Select</option>
+			    {foreach from=$company_info item=company key=i}
+			    	{if $company.client_id eq $single_data.company_id}
+						<option value='{$company.client_id}' selected="selected">{$company.company_name}</option>
+					{else}
+						<option value='{$company.client_id}'>{$company.company_name}</option>
+					{/if}
+	            {/foreach}
+			</select>
+		</td>
+
+         <td width="13%"> <a href="{$base_url}users/add_new_company/"><input type="button" class="go_populate" value="Add"  ></a> </td>
+
+         <td width="22%"><div align="right">RO Number (Official use only)</div></td>
+
+         <td width="27%"><input name="RO_Number" type="text" id="textfield8"  size="22" value="{$single_data.ro_number}" /></td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Contact Person :</div></td>
+
+           <td colspan="2"><input name="textfield2" disabled="disabled" type="text" id="contact_person_hide" size="30" value="" /></td>
+
+           <td><div align="right">City:</div></td>
+
+		  <td>{html_options name=user_city options=$cities selected=$single_data.city separator='</td><td>'}
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Address :</div></td>
+
+           <td colspan="2"><textarea name="textarea" disabled="disabled" id="address_hide" cols="24" rows="3"></textarea></td>
+
+           <td><div align="right">Sales Person:</div></td>
+
+           <td><select name="Sales_Person" id="Sales_Person" >
+
+                  <option value="">Select</option>
+				    {foreach from=$users item=user key=i}
+				    	{if $user.user_type_id eq 3}
+				    		
+				    		{if $user.user_first_name eq $single_data.sales_person}
+		                  		<option value="{$user.user_first_name}" selected="selected">{$user.user_first_name}</option>
+		                  	{else}
+		                  		<option value="{$user.user_first_name}">{$user.user_first_name}</option>
+		                  	{/if}	
+	                  	{/if}
+					{/foreach}
+                </select></td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Pin Code:</div></td>
+
+           <td colspan="2"><input name="textfield4" disabled="disabled" type="text" id="pin_hide" size="30" value="" /></td>
+
+           <td><div align="right">Approving Authonity:</div></td>
+
+           <td><select name="Approving_Authonity" id="jumpMenu2" >
+
+                 <option value="">Select</option>
+                 
+			    {foreach from=$users item=user key=i}
+			    	{if $user.user_type_id eq 1}
+			    	    {if $user.user_first_name eq $single_data.approving_authority}
+	                  		<option value="{$user.user_first_name}" selected="selected">{$user.user_first_name}</option>
+	                  	{else}
+	                  		<option value="{$user.user_first_name}">{$user.user_first_name}</option>
+	                  	{/if}
+                  	{/if}
+				{/foreach}
+
+               </select>
+           </td>
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Phone :</div></td>
+
+           <td colspan="2"><input name="textfield5" type="text" disabled="disabled" id="phone_hide" size="30" value="" /></td>
+
+           <td><div align="right">Date :</div></td>
+
+           <td><input name="approve_date" type="text"  id="textfield10" size="20" readonly="readonly" value="{$current_date}"/></td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Email :</div></td>
+
+           <td colspan="2"><input name="textfield6" type="text" disabled="disabled" id="email_hide" size="30" value="" /></td>
+
+           <td>&nbsp;</td>
+
+           <td>&nbsp;</td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Name of Establishment Being Advertised :</div></td>
+
+           <td colspan="2"><input name="Name_Establishment" type="text" id="NameOfEstablishment" size="30" value="{$single_data.name_estalishment}" /></td>
+
+           <td>&nbsp;</td>
+
+           <td>&nbsp;</td>
+
+         </tr>
+
+         <tr>
+
+           <td><div align="right">Category of Business Being Advertised :</div></td>
+
+			<td colspan="2">{html_options name=Category_Business options=$categories selected=$single_data.category separator='</td><td>'}
+
+           <td>&nbsp;</td>
+
+           <td>&nbsp;</td>
+
+         </tr>
+
+         </table>
+
+            </div>
+
+		</div>
+
+</div>
+
+
+
+    	        
+
+<!--One_Wrap-->
+
+ 	<div class="one_wrap">
+
+    	<div class="widget">
+
+        	
+
+            <div class="widget_body">
+
+            	<!--Activity Table-->
+
+                
+
+            	<table class="activity_datatable" width="100%" border="0" cellspacing="0" cellpadding="8">
+
+                    <tr >
+
+                       
+
+                        <th>Code</th>
+
+                        <th>Rack Rate</th>
+						 <th>Insertions</th>
+
+                        <th>Offered rate</th>
+						<th>Nov2013</th><th>Dec2013</th><th>Jan2014</th><th>Feb2014</th><th>Mar2014</th><th>Apr2014</th><th>May2014</th><th>Jun2014</th><th>Jul2014</th><th>Aug2014</th><th>Sep2014</th><th>Oct2014</th>
+                       
+                        <th>Actions</th>
+
+                    </tr>
+
+			        {foreach from=$items item=item key=i}
+                    <tr class="addr" id="row{$i}">
+
+	                <td>{html_options name=publish_AddType_row$i  class='AddType' title='EXEC' options=$ad_code selected=$item.code separator='</td><td>'}
+
+                    <td>
+
+                    <input type='text' size="5" maxlength="5" id="RackRate{$i}" name="RackRate_row{$i}" value="{$item.rack_rate}" readonly>
+
+                    </td>
+                     <td><input name="inseration_row{$i}" type="text" id="inseration{$i}" class="inseration{$i}" value="{$item.insertions}" size="2" readonly /></td>
+
+                    <td><input name="OfferRate_row{$i}" type="text" id="OfferRate{$i}" class=" OfferRate_row" size="2" value="{$item.offered_rate}" /><input type='hidden' id='total{$i}' class='total'></td>
+                    <input type='hidden' id='total0' class='total'></td>
+                    
+	                <td>{html_checkboxes name=row$i values=$values id=row$i class=$i selected=$item.publish_date separator='</td><td>'}
+ 
+                    </tr>                   
+                    {/foreach}
+
+                </table>
+
+				 
+
+            </div>
+
+            
+
+        </div>
+
+    </div>          
+
+	<div class="msgbar msg_Error hide_onC" style="display:none;">
+
+       <span class="iconsweet">X</span><p>Please enter offer rate less then rack rate...</p>
+
+    </div>
+     <div class="msgbar msg_Alert hide_onC" style="display:none;">
+       <span class="iconsweet">!</span><p>This is a Warning message.</p>
+     </div>
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="8">
+
+    <tr>
+
+      <td width="14%">&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+    </tr>
+
+    <tr>
+
+      <td width="14%">Special Instruction</td>
+
+    <td width="62%"> <div align="right">Total No of Insertions </div></td>
+
+    <td width="15%"><div align="right">
+
+      <input name="total_insertions" type="text" readonly id="Total_Insertions" size="21" value="{$single_data.total_insertions}"/>
+
+    </div></td>
+
+    </tr>
+
+    <tr>
+
+      <td width="14%"> <textarea name="Special_Instruction" id="Special_Instruction" cols="38" rows="2">{$single_data.spl_instructions}</textarea></td>
+
+      <td align="right"><div align="right">Nett Payable Rs</div></td>
+
+      <td><div align="right">
+
+        <input name="Net_Pay" type="text" id="Net_Pay" class="" value="{$single_data.net_pay}" readonly  size="21" />
+
+      </div></td>
+
+      <td width="9%"><div align="right">
+
+        <input type="button" id="calculate_netpay" value="calculate">
+
+      </div></td>
+
+    </tr>
+
+    <tr>
+
+      <td>&nbsp;</td>
+
+      <td align="right"><div align="center">
+
+        <input type="submit" value="Save Ro Form" name="Exec_Roform_submit" id="Exec_Roform_submit" class='btnLogin' style="float: left;">
+
+      </div></td>
+
+      <td>&nbsp;</td>
+
+      <td>&nbsp;</td>
+
+    </tr>
+
+    </table>
+
+      
+
+</div>
+
+</div>
+
+ </form>
+
+</div>

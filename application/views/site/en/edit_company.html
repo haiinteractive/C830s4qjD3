@@ -1,0 +1,69 @@
+<!--Content Wrap-->
+<div id="content_wrap">	<!--Activity Stats-->
+
+    	        
+<div class="one_wrap">
+    	<div class="widget">
+        	<div class="widget_title"><h5>Edit Company</h5></div>
+            <div class="widget_body_table_top" style="padding:10px;">
+			<form name='edit_company_form' id='edit_company_form' method='POST' >
+            <table width="100%">
+
+        	<div class='alert-box error' style="display: none;"></div>
+        	<div class='alert-box success' style="display: none;"></div>
+              <tr>
+                 <td width="26%" height="28" align="left" valign="middle">Company Name :</td>
+                 <td width="74%" align="left" valign="middle"><input name="company_name" type="text"  id="company_name" size="30" value="{$clientinfo.company_name}" /></td>
+             </tr>
+			 <tr>
+                 <td width="26%" height="28" align="left" valign="middle">Contact Person :</td>
+                 <td width="74%" align="left" valign="middle"><input name="contact_person" type="text" id="contact_person"  size="30" value="{$clientinfo.contact_person}" /><p><span id="ContactPersoninfo" style="color:#F00; display:none;">sdasdasd</span></p></td>
+             </tr>
+             <tr>
+                 <td height="30" align="left" valign="middle">Address :</td>
+                 <td align="left" valign="middle"><textarea name="address" id="address" cols="40"  rows="3">{$clientinfo.address}</textarea><p><span id="CompanyAddressinfo" style="color:#F00; display:none;">sdasdasd</span></p></td>
+             </tr>
+                  <tr>
+                     <td height="25" align="left" valign="top">&nbsp;</td>
+                     <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                     <tr>
+                         <td height="10" colspan="4"></td>
+                     </tr>
+                     <tr>
+                         <td width="16%" height="25" align="left" valign="middle">Pin Code</td>
+                         <td width="28%" align="left" valign="middle"><input name="pin_code"  type="text" id="pin_code" size="13" value="{$clientinfo.pincode}" /></td>
+                     </tr>
+                     <tr>
+                         <td height="10" colspan="4" align="left" valign="middle"></td>
+                     </tr>
+           			</table></td>
+                </tr>
+                <tr>
+                    <td height="28" align="left" valign="bottom">Phone :</td>
+                    <td align="left" valign="bottom"><input name="contact_no"  type="text" id="contact_no" size="30" value="{$clientinfo.contact_no}" /></td>
+                </tr>
+                <tr>
+                     <td height="28" align="left" valign="bottom">Email :</td>
+                     <td align="left" valign="bottom"><input name="email_id" type="text" id="email_id" size="30" value="{$clientinfo.email_id}" /></td>
+                </tr>
+                <tr>
+                     <td height="28" align="left" valign="bottom">Client Status :</td>
+                     <td align="left" valign="bottom">
+		             {html_options name=client_status id=client_status options=$options selected=$clientinfo.client_status}</td>
+                </tr>
+                <tr>
+               <td>&nbsp;</td>
+               	<input type='hidden' name='client_id' id='client_id' value="{$clientinfo.client_id}" />
+               <td><input type="submit" id="update_company_btn" name='update_company_btn' value="Update"></td>
+             </tr>
+                              
+            </table>
+             </form>
+            </div>
+        </div>
+</div>
+	
+       
+</div>
+</section>
+</div>

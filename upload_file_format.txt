@@ -1,0 +1,16 @@
+
+EXEC FORM
+---------------
+
+ro number
+Client name
+Ad Code
+Sales Person
+Category
+Rack rate
+Offered Rate
+Approve Date
+Total_Net_Pay
+SPl Instr
+
+

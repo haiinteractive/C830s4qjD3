@@ -1,0 +1,88 @@
+
+<div class="widget_title">
+	<div id="eg_form">
+	
+	<input type='hidden' name='result_set' id='result_set' value='{$product}' />
+	
+	<form action="{$base_url}reports/Sales_Report/" method="get" id="egreport" name="egreport">
+          	<input type="hidden" name="form_type" id="form_type" class="form_type" value="EG"/>
+        <div style="padding:10px; float:left; padding-right:50px;">
+	            <strong>Sales Person:</strong>
+<select name="Sales_Person" id="Sales_Person" >
+
+                  <option value="">Select</option>
+                  
+			    {foreach from=$users item=user key=i}
+			    	{if $user.user_type_id eq 3}
+				    	{if $user.user_id eq $Sales_Person}
+	                  		<option value="{$user.user_first_name}" selected>{$user.user_first_name}</option>
+	                  	{else}
+	                  		<option value="{$user.user_first_name}">{$user.user_first_name}</option>
+	                  	{/if}
+                  	{/if}
+				{/foreach}
+                </select>
+            </div>
+
+            <div id="city">
+            	<div style="padding:10px;float:left;float:left; padding-right:50px;">
+                    <strong>Category:</strong>
+	           		<select name="Category_Business" id="Category_Business123" >
+	
+	        			<option value="">Select Category</option>
+	        			
+					    {foreach from=$categories_list item=category key=i}
+					    	{if $category.category_id eq $Category}
+		                  		<option value="{$category.category_id}" selected="selected">{$category.category_name}</option>
+		                  	{else}
+		                  		<option value="{$category.category_id}">{$category.category_name}</option>
+		                  	{/if}
+						{/foreach}
+	        			
+	
+	          		</select>
+                </div>
+            </div>
+
+            <!-- eg selection -->
+            <div id="eg_session" >
+                <div style="padding:10px; float:left;">
+	                <strong>AdType:</strong>
+	           		<select name="adtype" id="adtype" >
+	
+	        			<option value="">Select AdType</option>
+					    {foreach from=$codes_list item=codes key=i}
+					    	{if $codes.code_id eq $Adtype}
+		                  		<option value="{$codes.code_id}" selected="selected">{$codes.code_type}</option>
+		                  	{else}
+		                  		<option value="{$codes.code_id}">{$codes.code_type}</option>
+		                  	{/if}
+						{/foreach}
+	        			
+	
+	          		</select>
+           		</div>
+           		
+                <div style="padding:10px; float:left;">
+                    <strong>Lapsed Client:</strong>
+                    <select name="lapsed_client" id="lapsed_client" >
+	        			<option value="">Select Lapsed Client</option>
+					    {foreach from=$company_info item=client key=i}
+					    	{if $client.client_status eq '0'}
+						    	{if $client.client_id eq $lapsed_client}
+			                  		<option value="{$client.client_id}" selected="selected">{$client.company_name}</option>
+			                  	{else}
+			                  		<option value="{$client.client_id}" >{$client.company_name}</option>
+			                  	{/if}	
+		                  	{/if}
+						{/foreach}
+					</select>
+                </div>
+			<div style="padding:8px; float:left;" id="gobtn">
+                <input type="submit" name="populate" id="populate" value="GO" class="whitishBtn button_small">
+            </div>
+          </div>
+          <input type="hidden" name="response" id="response" value="add"></input>
+          </form>           
+		</div>
+</div>		
