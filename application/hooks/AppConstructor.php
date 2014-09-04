@@ -22,7 +22,7 @@ class AppConstructor extends CI_Hooks {
             'script_dir' => 'assets/', 
             'style_dir'  => 'assets/',
             'cache_dir'  => 'assets/cache/',
-            'base_uri'   => 'demo.haiinteractive.com/media/',
+            'base_uri'   => '',
             'combine'    => TRUE,
             'dev'        => FALSE
         );
@@ -39,7 +39,8 @@ class AppConstructor extends CI_Hooks {
     function doConstruct()
     {
     	$view_info = false;
-    $this->CI->carabiner->js('js/app.v1.js');
+/*    $this->CI->carabiner->js('files/ugc/js/jquery-1.10.1.min.js');
+ //   $this->CI->carabiner->js('js/app.v1.js');
     $this->CI->carabiner->js('js/app.plugin.js');
     $this->CI->carabiner->js('files/js/jquery.validate.min.js');
     $this->CI->carabiner->js('files/ugc/js/user.js');
@@ -62,12 +63,13 @@ class AppConstructor extends CI_Hooks {
     $this->CI->carabiner->js('files/js/jquery.ui.tabs.js');
     $this->CI->carabiner->js('files/js/fullcalendar.js');
     $this->CI->carabiner->js('files/js/gcal.js');
-    $this->CI->carabiner->js('files/js/bootstrap-modal.js');
+  //  $this->CI->carabiner->js('files/js/bootstrap-modal.js');
     $this->CI->carabiner->js('files/js/fancybox/jquery.mousewheel-3.0.4.pack.js');
     $this->CI->carabiner->js('js/moment.js');
     $this->CI->carabiner->js('js/daterangepicker.js');
-    $this->CI->carabiner->js('files/js/ajax.js');
 
+	$this->CI->carabiner->display('js');
+        $this->CI->carabiner->empty_cache('both', 'yesterday');*/
     }    
 	
 	

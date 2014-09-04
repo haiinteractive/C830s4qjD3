@@ -42,11 +42,11 @@ $.fn.calendar = function(options) {
             popover_options = {placement: 'top'};
 
         var tooltip_options;
-        if ( typeof args.tooltip_options != "undefined" )
+/*        if ( typeof args.tooltip_options != "undefined" )
             tooltip_options = args.tooltip_options;
         else
             tooltip_options = {placement: 'top'};
-
+*/
         var req_ajax;
         if ( typeof args.req_ajax != "undefined" )
             req_ajax = args.req_ajax;
@@ -342,9 +342,9 @@ $.fn.calendar = function(options) {
                 }
             }
             
-            $('#' + calendar_id + ' ' + '.event_tooltip a').tooltip(tooltip_options);
+/*            $('#' + calendar_id + ' ' + '.event_tooltip a').tooltip(tooltip_options);
             $('#' + calendar_id + ' ' + '.event_popover a').popover(popover_options);
-
+*/
             $('.manual_popover').click( function(){
                 $(this).popover('toggle');
             } );

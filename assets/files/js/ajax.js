@@ -7,7 +7,7 @@
 			
 			end_date = moment(end_date).format('YYYY-MM-DD');
 		}
-		$('.loading').html('<img src="'+root_dir+'files/loading.gif" height="40" width="40"> ');
+		$('.loading').html('<img src="'+root_dir+'assets/files/loading.gif" height="40" width="40"> ');
 		$.ajax({
 		               url: root_dir+"home/LeaderBoard/",
 		               type: 'GET',

@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-	 var root_dir = 'http://demo.haiinteractive.com/media/';
+	// var root_dir = 'http://demo.haiinteractive.com/media/';
 	
-	//var root_dir = 'http://demo.localhost.com/media/';
+	var root_dir = 'http://demo.localhost.com/media/';
 		
 	$("#cancel_form").click(function(){
 		var answer = confirm("Are you sure you want to Cancel this item?");
