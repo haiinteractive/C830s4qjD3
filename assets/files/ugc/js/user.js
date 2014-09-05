@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
-	// var root_dir = 'http://demo.haiinteractive.com/media/';
-	
-	var root_dir = 'http://demo.localhost.com/media/';
+	var root_dir = 'http://demo.haiinteractive.com/media/';
+	//var root_dir = 'http://demo.localhost.com/media/';
 		
 	$("#cancel_form").click(function(){
 		var answer = confirm("Are you sure you want to Cancel this item?");
@@ -1002,7 +1001,9 @@ $(document).ready(function(){
 
 
                   var cb = function(start, end, label) {
-                    console.log(start.toISOString(), end.toISOString(), label);
+                    //console.log(start.toISOString(), end.toISOString(), label);
+                    dash_init( start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD'));
+                    //console.log(start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD') );
                     $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
                     //alert("Callback has fired: [" + start.format('MMMM D, YYYY') + " to " + end.format('MMMM D, YYYY') + ", label = " + label + "]");
                   }

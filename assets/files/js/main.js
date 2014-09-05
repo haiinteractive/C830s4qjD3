@@ -1,6 +1,6 @@
 
-	//var root_dir = 'http://demo.haiinteractive.com/media/';
-	var root_dir = 'http://demo.localhost.com/media/';
+	var root_dir = 'http://demo.haiinteractive.com/media/';
+	//var root_dir = 'http://demo.localhost.com/media/';
 // JavaScript Document		
 $(document).ready(function() {
 	$(".AddType").on('change', function(){

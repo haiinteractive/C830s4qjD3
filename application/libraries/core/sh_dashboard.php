@@ -41,10 +41,11 @@ class Sh_Dashboard
     {
     	$response = false;
     	$response['total_earning'] = $this->_CI->dashboard_model->Total_Earning(  $start_date, $end_date  );
-              $response['total_clients'] = $this->_CI->dashboard_model->Total_Clients(  );
-              $response['total_products'] = $this->_CI->dashboard_model->Total_Products( );
-              $response['total_users'] = $this->_CI->dashboard_model->Total_Users(   );
-              $response['total_adtype'] = $this->_CI->dashboard_model->Total_AdType(  );
+              $response['total_clients'] = $this->_CI->dashboard_model->Total_Clients(  $start_date, $end_date  );
+              $response['total_products'] = $this->_CI->dashboard_model->Total_Products( $start_date, $end_date  );
+              $response['total_users'] = $this->_CI->dashboard_model->Total_Users(   $start_date, $end_date  );
+              $response['total_adtype'] = $this->_CI->dashboard_model->Total_AdType(  $start_date, $end_date  );
+              $response['net_revenue'] = $this->_CI->dashboard_model->Net_Revenue(  $start_date, $end_date  );
     	return $response;
     }
     

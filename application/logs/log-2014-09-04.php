@@ -7589,3 +7589,204 @@ ERROR - 2014-09-04 19:09:47 --> Severity: Notice  --> Undefined variable: start_
 DEBUG - 2014-09-04 19:09:47 --> Carabiner: library configured.
 ERROR - 2014-09-04 19:09:47 --> Severity: Notice  --> Undefined variable: end_date C:\wamp\www\Hai_interactive\demo\media\application\controllers\home.php 87
 DEBUG - 2014-09-04 19:09:47 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:47 --> Config Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Utf8 Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> UTF-8 Support Enabled
+DEBUG - 2014-09-04 19:12:47 --> URI Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Router Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> No URI present. Default controller set.
+DEBUG - 2014-09-04 19:12:47 --> Output Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Security Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Input Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-09-04 19:12:47 --> Language Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Loader Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Helper loaded: date_helper
+DEBUG - 2014-09-04 19:12:47 --> Helper loaded: cookie_helper
+DEBUG - 2014-09-04 19:12:47 --> Helper loaded: url_helper
+DEBUG - 2014-09-04 19:12:47 --> Database Driver Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Session Class Initialized
+DEBUG - 2014-09-04 19:12:47 --> Helper loaded: string_helper
+DEBUG - 2014-09-04 19:12:48 --> A session cookie was not found.
+DEBUG - 2014-09-04 19:12:48 --> Session routines successfully run
+DEBUG - 2014-09-04 19:12:48 --> Smarty Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> XML-RPC Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Email Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Config file loaded: application/config/account.php
+DEBUG - 2014-09-04 19:12:48 --> Config file loaded: application/config/menu.php
+DEBUG - 2014-09-04 19:12:48 --> Controller Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Helper loaded: form_helper
+DEBUG - 2014-09-04 19:12:48 --> Form Validation Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Sh_users class already loaded. Second attempt ignored.
+ERROR - 2014-09-04 19:12:48 --> Severity: 8192  --> Function split() is deprecated C:\wamp\www\Hai_interactive\demo\media\application\controllers\home.php 35
+DEBUG - 2014-09-04 19:12:48 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Carabiner: Library initialized.
+DEBUG - 2014-09-04 19:12:48 --> Config file loaded: application/config/carabiner.php
+DEBUG - 2014-09-04 19:12:48 --> Carabiner: config loaded from config file.
+DEBUG - 2014-09-04 19:12:48 --> Carabiner: library configured.
+DEBUG - 2014-09-04 19:12:48 --> Carabiner: library configured.
+ERROR - 2014-09-04 19:12:48 --> Severity: User Warning  --> Smarty error: unable to read resource: "site/en/right_banner.html" C:\wamp\www\Hai_interactive\demo\media\application\libraries\external\smarty\Smarty.class.php 1113
+DEBUG - 2014-09-04 19:12:48 --> Final output sent to browser
+DEBUG - 2014-09-04 19:12:48 --> Total execution time: 0.7069
+DEBUG - 2014-09-04 19:12:48 --> Config Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Config Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Utf8 Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Utf8 Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> UTF-8 Support Enabled
+DEBUG - 2014-09-04 19:12:48 --> UTF-8 Support Enabled
+DEBUG - 2014-09-04 19:12:48 --> URI Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> URI Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Router Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Router Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Output Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Output Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Security Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Security Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Input Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Input Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:48 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:48 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:48 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:48 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:48 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-09-04 19:12:48 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:48 --> Language Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-09-04 19:12:48 --> Language Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Loader Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Loader Class Initialized
+DEBUG - 2014-09-04 19:12:48 --> Helper loaded: date_helper
+DEBUG - 2014-09-04 19:12:48 --> Helper loaded: cookie_helper
+DEBUG - 2014-09-04 19:12:48 --> Helper loaded: date_helper
+DEBUG - 2014-09-04 19:12:48 --> Helper loaded: url_helper
+DEBUG - 2014-09-04 19:12:48 --> Helper loaded: cookie_helper
+DEBUG - 2014-09-04 19:12:49 --> Helper loaded: url_helper
+DEBUG - 2014-09-04 19:12:49 --> Database Driver Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Database Driver Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Session Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Helper loaded: string_helper
+DEBUG - 2014-09-04 19:12:49 --> Session Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Session routines successfully run
+DEBUG - 2014-09-04 19:12:49 --> Helper loaded: string_helper
+DEBUG - 2014-09-04 19:12:49 --> Session routines successfully run
+DEBUG - 2014-09-04 19:12:49 --> Smarty Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> XML-RPC Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Smarty Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> XML-RPC Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Email Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Email Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Config file loaded: application/config/account.php
+DEBUG - 2014-09-04 19:12:49 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Config file loaded: application/config/menu.php
+DEBUG - 2014-09-04 19:12:49 --> Config file loaded: application/config/account.php
+DEBUG - 2014-09-04 19:12:49 --> Controller Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Config file loaded: application/config/menu.php
+DEBUG - 2014-09-04 19:12:49 --> Controller Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Helper loaded: form_helper
+DEBUG - 2014-09-04 19:12:49 --> Form Validation Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Helper loaded: form_helper
+DEBUG - 2014-09-04 19:12:49 --> Form Validation Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Model Class Initialized
+ERROR - 2014-09-04 19:12:49 --> Severity: 8192  --> Function split() is deprecated C:\wamp\www\Hai_interactive\demo\media\application\controllers\forms.php 33
+DEBUG - 2014-09-04 19:12:49 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Carabiner: Library initialized.
+DEBUG - 2014-09-04 19:12:49 --> Sh_users class already loaded. Second attempt ignored.
+DEBUG - 2014-09-04 19:12:49 --> Config file loaded: application/config/carabiner.php
+ERROR - 2014-09-04 19:12:49 --> Severity: 8192  --> Function split() is deprecated C:\wamp\www\Hai_interactive\demo\media\application\controllers\home.php 35
+DEBUG - 2014-09-04 19:12:49 --> Carabiner: config loaded from config file.
+DEBUG - 2014-09-04 19:12:49 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Carabiner: library configured.
+DEBUG - 2014-09-04 19:12:49 --> Carabiner: Library initialized.
+DEBUG - 2014-09-04 19:12:49 --> Carabiner: library configured.
+DEBUG - 2014-09-04 19:12:49 --> Config file loaded: application/config/carabiner.php
+DEBUG - 2014-09-04 19:12:49 --> Carabiner: config loaded from config file.
+DEBUG - 2014-09-04 19:12:49 --> Config Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Carabiner: library configured.
+DEBUG - 2014-09-04 19:12:49 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Carabiner: library configured.
+DEBUG - 2014-09-04 19:12:49 --> Utf8 Class Initialized
+ERROR - 2014-09-04 19:12:49 --> Severity: Warning  --> Missing argument 1 for Home::LeaderBoard() C:\wamp\www\Hai_interactive\demo\media\application\controllers\home.php 85
+DEBUG - 2014-09-04 19:12:49 --> UTF-8 Support Enabled
+ERROR - 2014-09-04 19:12:49 --> Severity: Warning  --> Missing argument 2 for Home::LeaderBoard() C:\wamp\www\Hai_interactive\demo\media\application\controllers\home.php 85
+DEBUG - 2014-09-04 19:12:49 --> URI Class Initialized
+ERROR - 2014-09-04 19:12:49 --> Severity: Notice  --> Undefined variable: start_date C:\wamp\www\Hai_interactive\demo\media\application\controllers\home.php 87
+DEBUG - 2014-09-04 19:12:49 --> Router Class Initialized
+ERROR - 2014-09-04 19:12:49 --> Severity: Notice  --> Undefined variable: end_date C:\wamp\www\Hai_interactive\demo\media\application\controllers\home.php 87
+DEBUG - 2014-09-04 19:12:49 --> Output Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Security Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Input Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:49 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:12:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-09-04 19:12:49 --> Language Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Loader Class Initialized
+DEBUG - 2014-09-04 19:12:49 --> Helper loaded: date_helper
+DEBUG - 2014-09-04 19:12:49 --> Helper loaded: cookie_helper
+DEBUG - 2014-09-04 19:12:49 --> Helper loaded: url_helper
+DEBUG - 2014-09-04 19:12:50 --> Database Driver Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Session Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Helper loaded: string_helper
+DEBUG - 2014-09-04 19:12:50 --> Session routines successfully run
+DEBUG - 2014-09-04 19:12:50 --> Smarty Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> XML-RPC Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Email Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Config file loaded: application/config/account.php
+DEBUG - 2014-09-04 19:12:50 --> Config file loaded: application/config/menu.php
+DEBUG - 2014-09-04 19:12:50 --> Controller Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Helper loaded: form_helper
+DEBUG - 2014-09-04 19:12:50 --> Form Validation Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Model Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Sh_users class already loaded. Second attempt ignored.
+ERROR - 2014-09-04 19:12:50 --> Severity: 8192  --> Function split() is deprecated C:\wamp\www\Hai_interactive\demo\media\application\controllers\home.php 35
+DEBUG - 2014-09-04 19:12:50 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:12:50 --> Carabiner: Library initialized.
+DEBUG - 2014-09-04 19:12:50 --> Config file loaded: application/config/carabiner.php
+DEBUG - 2014-09-04 19:12:50 --> Carabiner: config loaded from config file.
+DEBUG - 2014-09-04 19:12:50 --> Carabiner: library configured.
+DEBUG - 2014-09-04 19:12:50 --> Carabiner: library configured.
+ERROR - 2014-09-04 19:12:50 --> Severity: User Warning  --> Smarty error: unable to read resource: "site/en/right_banner.html" C:\wamp\www\Hai_interactive\demo\media\application\libraries\external\smarty\Smarty.class.php 1113
+DEBUG - 2014-09-04 19:12:50 --> Final output sent to browser
+DEBUG - 2014-09-04 19:12:50 --> Total execution time: 0.7701
+DEBUG - 2014-09-04 19:17:19 --> Config Class Initialized
+DEBUG - 2014-09-04 19:17:19 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:17:19 --> Utf8 Class Initialized
+DEBUG - 2014-09-04 19:17:19 --> UTF-8 Support Enabled
+DEBUG - 2014-09-04 19:17:19 --> URI Class Initialized
+DEBUG - 2014-09-04 19:17:19 --> Router Class Initialized
+DEBUG - 2014-09-04 19:17:19 --> Output Class Initialized
+DEBUG - 2014-09-04 19:17:19 --> Security Class Initialized
+DEBUG - 2014-09-04 19:17:19 --> Input Class Initialized
+DEBUG - 2014-09-04 19:17:19 --> XSS Filtering completed
+DEBUG - 2014-09-04 19:17:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-09-04 19:17:20 --> Language Class Initialized
+DEBUG - 2014-09-04 19:17:20 --> Hooks Class Initialized
+DEBUG - 2014-09-04 19:17:20 --> Loader Class Initialized
+DEBUG - 2014-09-04 19:17:20 --> Helper loaded: date_helper
+DEBUG - 2014-09-04 19:17:20 --> Helper loaded: cookie_helper
+DEBUG - 2014-09-04 19:17:20 --> Helper loaded: url_helper
+DEBUG - 2014-09-04 19:17:20 --> Database Driver Class Initialized
+ERROR - 2014-09-04 19:17:20 --> Severity: Warning  --> mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'rightern_news'@'localhost' (using password: YES) C:\wamp\www\Hai_interactive\demo\media\system\database\drivers\mysqli\mysqli_driver.php 73
+ERROR - 2014-09-04 19:17:20 --> Unable to connect to the database
+DEBUG - 2014-09-04 19:17:20 --> Language file loaded: language/english/db_lang.php

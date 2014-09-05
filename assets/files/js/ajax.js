@@ -10,7 +10,7 @@
 		$('.loading').html('<img src="'+root_dir+'assets/files/loading.gif" height="40" width="40"> ');
 		$.ajax({
 		               url: root_dir+"home/LeaderBoard/",
-		               type: 'GET',
+		               type: 'POST',
 		               dataType: 'json',
 			data:'start_date='+start_date+'&end_date='+end_date,
                 		success: function(data, textStatus, xhr) {
@@ -19,6 +19,8 @@
 		    		$("#total_products").html(data.total_products);
 		    		$("#total_users").html(data.total_users);
 		    		$("#total_adtype").html(data.total_adtype);
+		    		$("#net_revenue").html(data.net_revenue);
+		    		
 			}
 		         });
          	}

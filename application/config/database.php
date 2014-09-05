@@ -44,14 +44,14 @@
 | the active record class
 */
 //define('TOOL_DB_NAME', 'explocity');
-define('TOOL_DB_NAME', 'rightern_sales');
 $active_group = 'default';
+define('TOOL_DB_NAME', 'rightern_media');
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost'; 
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'rightern_sales';
+$db['default']['username'] = 'rightern_news';
+$db['default']['password'] = 'M0nster.com';
+$db['default']['database'] = 'rightern_media';
 
 
 /*$db['default']['hostname'] = 'localhost'; 

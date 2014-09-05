@@ -82,10 +82,12 @@ class Home extends CI_Controller {
 		        $this->mysmarty->assign('filename',$filename);
 		        $this->mysmarty->display('site/home.html'); 
 	}
-	public function LeaderBoard( $start_date, $end_date )
+	public function LeaderBoard(  )
 	{
+		$start_date = $this->security->xss_clean( $this->input->post("start_date") );
+		$end_date = $this->security->xss_clean( $this->input->post("end_date") );
 		 $dash = $this->sh_dashboard->Dashboard_Info( $start_date, $end_date  );
-		 echo json_encode($dash);
+		 echo json_encode($dash );
 		 die;
 	}
 	
