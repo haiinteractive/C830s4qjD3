@@ -39,7 +39,7 @@ class AppConstructor extends CI_Hooks {
     function doConstruct()
     {
     	$view_info = false;
-    $this->CI->carabiner->js('files/ugc/js/jquery-1.10.1.min.js');
+/*    $this->CI->carabiner->js('files/ugc/js/jquery-1.10.1.min.js');
  //   $this->CI->carabiner->js('js/app.v1.js');
     $this->CI->carabiner->js('js/app.plugin.js');
     $this->CI->carabiner->js('files/js/jquery.validate.min.js');
@@ -70,7 +70,7 @@ class AppConstructor extends CI_Hooks {
 
 	$this->CI->carabiner->display('js');
         $this->CI->carabiner->empty_cache('both', 'yesterday');
-    }    
+*/    }    
 	
 	
 }

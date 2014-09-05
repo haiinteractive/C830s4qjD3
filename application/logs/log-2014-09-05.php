@@ -5640,3 +5640,69 @@ DEBUG - 2014-09-05 19:18:44 --> XSS Filtering completed
 DEBUG - 2014-09-05 19:18:44 --> Carabiner: library configured.
 DEBUG - 2014-09-05 19:18:44 --> XSS Filtering completed
 DEBUG - 2014-09-05 19:18:44 --> XSS Filtering completed
+DEBUG - 2014-09-05 19:36:44 --> Config Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> Hooks Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> Utf8 Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> UTF-8 Support Enabled
+DEBUG - 2014-09-05 19:36:44 --> URI Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> Router Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> No URI present. Default controller set.
+DEBUG - 2014-09-05 19:36:44 --> Output Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> Security Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> Input Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> XSS Filtering completed
+DEBUG - 2014-09-05 19:36:44 --> XSS Filtering completed
+DEBUG - 2014-09-05 19:36:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-09-05 19:36:44 --> Language Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> Hooks Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> Loader Class Initialized
+DEBUG - 2014-09-05 19:36:44 --> Helper loaded: date_helper
+DEBUG - 2014-09-05 19:36:44 --> Helper loaded: cookie_helper
+DEBUG - 2014-09-05 19:36:44 --> Helper loaded: url_helper
+DEBUG - 2014-09-05 19:36:44 --> Database Driver Class Initialized
+ERROR - 2014-09-05 19:36:44 --> Severity: Warning  --> mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'rightern_news'@'localhost' (using password: YES) C:\wamp\www\Hai_interactive\demo\media\system\database\drivers\mysqli\mysqli_driver.php 73
+ERROR - 2014-09-05 19:36:44 --> Unable to connect to the database
+DEBUG - 2014-09-05 19:36:44 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2014-09-05 19:37:02 --> Config Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Hooks Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Utf8 Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> UTF-8 Support Enabled
+DEBUG - 2014-09-05 19:37:02 --> URI Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Config Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Router Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Hooks Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Output Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Utf8 Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Security Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> UTF-8 Support Enabled
+DEBUG - 2014-09-05 19:37:02 --> Input Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> XSS Filtering completed
+DEBUG - 2014-09-05 19:37:02 --> URI Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> XSS Filtering completed
+DEBUG - 2014-09-05 19:37:02 --> Router Class Initialized
+DEBUG - 2014-09-05 19:37:02 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-09-05 19:37:03 --> Output Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> Language Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> Security Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> Input Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> Hooks Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> XSS Filtering completed
+DEBUG - 2014-09-05 19:37:03 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-09-05 19:37:03 --> Loader Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> Language Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> Helper loaded: date_helper
+DEBUG - 2014-09-05 19:37:03 --> Helper loaded: cookie_helper
+DEBUG - 2014-09-05 19:37:03 --> Hooks Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> Helper loaded: url_helper
+DEBUG - 2014-09-05 19:37:03 --> Loader Class Initialized
+DEBUG - 2014-09-05 19:37:03 --> Database Driver Class Initialized
+ERROR - 2014-09-05 19:37:03 --> Severity: Warning  --> mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'rightern_news'@'localhost' (using password: YES) C:\wamp\www\Hai_interactive\demo\media\system\database\drivers\mysqli\mysqli_driver.php 73
+DEBUG - 2014-09-05 19:37:03 --> Helper loaded: date_helper
+ERROR - 2014-09-05 19:37:03 --> Unable to connect to the database
+DEBUG - 2014-09-05 19:37:03 --> Helper loaded: cookie_helper
+DEBUG - 2014-09-05 19:37:03 --> Language file loaded: language/english/db_lang.php
+DEBUG - 2014-09-05 19:37:03 --> Helper loaded: url_helper
+DEBUG - 2014-09-05 19:37:03 --> Database Driver Class Initialized
+ERROR - 2014-09-05 19:37:03 --> Severity: Warning  --> mysqli_connect() [<a href='function.mysqli-connect'>function.mysqli-connect</a>]: (28000/1045): Access denied for user 'rightern_news'@'localhost' (using password: YES) C:\wamp\www\Hai_interactive\demo\media\system\database\drivers\mysqli\mysqli_driver.php 73
+ERROR - 2014-09-05 19:37:03 --> Unable to connect to the database
+DEBUG - 2014-09-05 19:37:03 --> Language file loaded: language/english/db_lang.php
