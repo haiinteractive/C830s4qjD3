@@ -39,17 +39,17 @@ class AppConstructor extends CI_Hooks {
     function doConstruct()
     {
     	$view_info = false;
-/*    $this->CI->carabiner->js('files/ugc/js/jquery-1.10.1.min.js');
+    $this->CI->carabiner->js('files/ugc/js/jquery-1.10.1.min.js');
  //   $this->CI->carabiner->js('js/app.v1.js');
     $this->CI->carabiner->js('js/app.plugin.js');
     $this->CI->carabiner->js('files/js/jquery.validate.min.js');
-    $this->CI->carabiner->js('files/ugc/js/user.js');
-    $this->CI->carabiner->js('files/js/main.js');
+    //$this->CI->carabiner->js('files/ugc/js/user.js');
+    //$this->CI->carabiner->js('files/js/main.js');
     $this->CI->carabiner->js('js/validation.js');
     $this->CI->carabiner->js('js/charts/easypiechart/jquery.easy-pie-chart.js');
     $this->CI->carabiner->js('js/charts/sparkline/jquery.sparkline.min.js');
     $this->CI->carabiner->js('js/calendar/bootstrap_calendar.js');
-    $this->CI->carabiner->js('js/calendar/demo.js');
+   $this->CI->carabiner->js('js/calendar/demo.js');
     $this->CI->carabiner->js('js/sortable/jquery.sortable.js');
     $this->CI->carabiner->js('files/js/jquery.quicksand.js');
     $this->CI->carabiner->js('files/js/jquery.easing.1.3.js');
@@ -69,7 +69,7 @@ class AppConstructor extends CI_Hooks {
     $this->CI->carabiner->js('js/daterangepicker.js');
 
 	$this->CI->carabiner->display('js');
-        $this->CI->carabiner->empty_cache('both', 'yesterday');*/
+        $this->CI->carabiner->empty_cache('both', 'yesterday');
     }    
 	
 	
